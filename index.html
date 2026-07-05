@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADU</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="appbar-wrap">
+      <header class="appbar">
+        <div class="toolbar">
+            <div class="brand"><span class="brand-text">ADU</span></div>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            &#9776;
+          </button>
+
+          <nav class="desktop-nav">
+            <a href="#about">About</a>
+            <a href="#scope">Scope</a>
+            <a href="#organizers">Organizers</a>
+            <a href="#registration">Registration</a>
+            <a href="#program">Program</a>
+            <a href="#gallery">Gallery</a>
+          </nav>
+        </div>
+      </header>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+        <a href="#about">About</a>
+        <a href="#scope">Scope</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#registration">Registration</a>
+        <a href="#program">Program</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+
+    <div class="hero-shell">
+      <section class="hero">
+        <div class="hero-carousel">
+          <div class="hero-slide hero-slide-0 active"></div>
+          <div class="hero-slide hero-slide-1"></div>
+          <div class="hero-slide hero-slide-2"></div>
+          <div class="hero-slide hero-slide-3"></div>
+          <div class="hero-slide hero-slide-4"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-lines"></div>
+
+        <div class="hero-content">
+          <div class="hero-card">
+            <div class="hero-badge"><span class="dot"></span> November 2026 &bull; Sydney</div>
+            <h1>Algebra Down Under</h1>
+            <h2><span class="wsu">Western Sydney University</span></h2>
+            <p><strong>November 16 &ndash; 20, 2026 &bull; Sydney, Australia</strong></p>
+            <p class="hero-subtitle"><strong>The 10th Australian Algebra Conference</strong></p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://payments.westernsydney.edu.au/ADU2026" target="_blank" rel="noreferrer noopener">Register &amp; Pay</a>
+              <a class="btn btn-primary" href="assets/ADU_poster.pdf" download="ADU_poster.pdf" target="_blank" rel="noreferrer noopener">Download Poster</a>
+              <p>
+                If you have questions in the meantime, email
+                <a href="mailto:adu@westernsydney.edu.au">adu@westernsydney.edu.au</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="hero-arrow hero-arrow-left" id="prevSlide" aria-label="Previous slide">&#10094;</button>
+        <button type="button" class="hero-arrow hero-arrow-right" id="nextSlide" aria-label="Next slide">&#10095;</button>
+        <div class="hero-dots" id="heroDots">
+          <span class="hero-dot active" data-slide="0"></span>
+          <span class="hero-dot" data-slide="1"></span>
+          <span class="hero-dot" data-slide="2"></span>
+          <span class="hero-dot" data-slide="3"></span>
+          <span class="hero-dot" data-slide="4"></span>
+        </div>
+      </section>
+    </div>
+
+    <main class="container content">
+      <section id="about" class="section">
+        <div class="section-header">
+          <div>
+            <h3>About ADU</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <p>
+            Algebra Down Under (ADU), the <strong>10th Australian Algebra Conference</strong>, is an international
+            meeting that brings together mathematicians from around the world. The conference will be held at
+            <span class="wsu">Western Sydney University</span> from <strong>November 16&ndash;20, 2026</strong>.
+          </p>
+          <p>
+            Beyond the formal program, the conference is committed to fostering an inclusive and welcoming
+            environment. We strongly encourage participation from <strong>mathematicians in developing countries,
+            members of Aboriginal and Indigenous communities, women in mathematics, and individuals from other
+            underrepresented groups</strong>, with the aim of building a diverse and representative mathematical
+            gathering.
+          </p>
+          <p>
+            In addition to plenary and contributed talks, ADU will offer ample opportunities for informal
+            discussions and networking, supporting collaboration and strengthening connections within the global
+            algebra community. We look forward to welcoming participants to Sydney!
+          </p>
+        </div>
+      </section>
+
+      <section id="scope" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Scientific Scope</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="chips">
+            <span>Representation Theory</span>
+            <span>K-Theory</span>
+            <span>Operator Algebras</span>
+            <span>Non-commutative Algebras</span>
+            <span>Group Theory</span>
+            <span>Algebraic Geometry</span>
+            <span>Model Theory</span>
+            <span>Semigroup Theory</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="organizers" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Organizers</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="organizer-panel">
+          <p>Department of Mathematics, Western Sydney University</p>
+        </div>
+      </section>
+
+      <section id="registration" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Registration</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <p>
+            Participants are requested to complete registration via the link below. Deadlines and funding information
+            will be announced in due course. Limited funding support <strong>may be available</strong>, subject to
+            eligibility and availability of funds.
+          </p>
+          <p class="muted">
+            If you have any questions, please contact the organizers by email.
+          </p>
+
+          <h4 class="fee-heading">Registration Fees</h4>
+          <div class="fee-table-wrap">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Early Bird</th>
+                  <th>Standard</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Academic / General</td>
+                  <td>$180</td>
+                  <td>$220</td>
+                </tr>
+                <tr>
+                  <td>Student / Postdoc / ECR</td>
+                  <td>$100</td>
+                  <td>$130</td>
+                </tr>
+                <tr>
+                  <td>Conference Dinner Only</td>
+                  <td>$100</td>
+                  <td>$100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted fee-note">
+            All fees are listed in <strong>AUD</strong> (Australian Dollars).
+          </p>
+
+          <div class="registration-box">
+            <a class="btn btn-primary block" href="https://payments.westernsydney.edu.au/ADU2026" target="_blank" rel="noreferrer noopener">Register &amp; Pay</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="program" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Program</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="card-list">
+          <article class="card">
+            <h4>Plenary Lectures</h4>
+            <p>Details to be announced.</p>
+          </article>
+          <article class="card">
+            <h4>Invited Talks</h4>
+            <p>Details to be announced.</p>
+          </article>
+          <article class="card">
+            <h4>Contributed Presentations</h4>
+            <p>Details to be announced.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Gallery</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <article class="card center-text">
+            <p>Gallery content coming soon.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="footer-card">
+        <hr />
+        <p><strong>Contact for more details:</strong> <a href="mailto:adu@westernsydney.edu.au">adu@westernsydney.edu.au</a></p>
+        <p class="mark">Designed and maintained by <a href="https://github.com/rg-io" target="_blank" rel="noopener noreferrer">rg-io</a></p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var menuToggle = document.getElementById('menu-toggle');
+        var mobileNav = document.getElementById('mobile-nav');
+
+        if (menuToggle && mobileNav) {
+          menuToggle.addEventListener('click', function () {
+            var isOpen = mobileNav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            mobileNav.setAttribute('aria-hidden', String(!isOpen));
+          });
+
+          var links = mobileNav.querySelectorAll('a');
+          for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function () {
+              mobileNav.classList.remove('open');
+              menuToggle.setAttribute('aria-expanded', 'false');
+              mobileNav.setAttribute('aria-hidden', 'true');
+            });
+          }
+        }
+      })();
+
+      (function () {
+        var slides = document.querySelectorAll('.hero-slide');
+        var dots = document.querySelectorAll('.hero-dot');
+        var prevBtn = document.getElementById('prevSlide');
+        var nextBtn = document.getElementById('nextSlide');
+
+        if (!slides.length) return;
+
+        var current = 0;
+        var intervalId;
+
+        function goToSlide(index) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+
+        function startAutoplay() {
+          intervalId = setInterval(function () {
+            goToSlide(current + 1);
+          }, 6000);
+        }
+
+        function restartAutoplay() {
+          clearInterval(intervalId);
+          startAutoplay();
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            goToSlide(current - 1);
+            restartAutoplay();
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            goToSlide(current + 1);
+            restartAutoplay();
+          });
+        }
+
+        dots.forEach(function (dot, index) {
+          dot.addEventListener('click', function () {
+            goToSlide(index);
+            restartAutoplay();
+          });
+        });
+
+        startAutoplay();
+      })();
+    </script>
+  </body>
+</html>
