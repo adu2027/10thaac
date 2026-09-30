@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ADU</title>
+    <title>Algebra Down Under 2026 | 10th Australian Algebra Conference</title>
+    <meta name="description" content="Algebra Down Under 2026, the 10th Australian Algebra Conference, at Western Sydney University, 16–20 November 2026." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +13,301 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      :root {
+        --adu-navy: #0d2847;
+        --adu-blue: #174f78;
+        --adu-accent: #b3262e;
+        --adu-text: #243241;
+        --adu-muted: #667584;
+        --adu-line: #dfe5ec;
+        --adu-soft: #f4f7fa;
+        --adu-white: #ffffff;
+        --adu-shadow: 0 14px 34px rgba(13, 40, 71, 0.08);
+      }
+
+      html { scroll-behavior: smooth; }
+      body {
+        color: var(--adu-text);
+        background: #f7f9fb;
+        font-family: "Source Sans 3", "Inter", Arial, sans-serif;
+        line-height: 1.65;
+      }
+
+      .appbar-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255,255,255,.97);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--adu-line);
+        box-shadow: 0 2px 12px rgba(13,40,71,.05);
+      }
+      .appbar, .toolbar { background: transparent; }
+      .toolbar { max-width: 1180px; margin: 0 auto; }
+      .brand-text {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        letter-spacing: .12em;
+        color: var(--adu-navy);
+      }
+      .desktop-nav a, .mobile-nav a {
+        color: #26384a;
+        font-weight: 650;
+        text-decoration: none;
+      }
+      .desktop-nav a:hover, .mobile-nav a:hover { color: var(--adu-accent); }
+
+      .hero-shell { max-width: 1460px; margin: 0 auto; }
+      .hero {
+        min-height: 610px;
+        border-radius: 0 0 26px 26px;
+        overflow: hidden;
+        box-shadow: 0 20px 55px rgba(12, 34, 57, .16);
+      }
+      .hero-overlay {
+        background: linear-gradient(90deg, rgba(5,22,39,.86) 0%, rgba(5,22,39,.68) 44%, rgba(5,22,39,.26) 100%);
+      }
+      .hero-card {
+        max-width: 760px;
+        padding: 2.2rem 2.35rem;
+        background: rgba(8, 28, 48, .80);
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0,0,0,.22);
+        backdrop-filter: blur(7px);
+      }
+      .hero-card h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        letter-spacing: -.035em;
+        line-height: 1.04;
+      }
+      .hero-card h2 { margin-top: .6rem; font-weight: 600; }
+      .hero-badge {
+        width: fit-content;
+        padding: .42rem .7rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,.10);
+        border: 1px solid rgba(255,255,255,.18);
+        font-weight: 650;
+        letter-spacing: .02em;
+      }
+      .hero-actions { gap: .65rem; }
+      .hero-actions > p {
+        width: 100%;
+        margin-top: .5rem;
+        color: rgba(255,255,255,.88);
+      }
+      .hero-actions > p a { color: #fff; text-decoration-thickness: 1px; }
+
+      .btn {
+        border-radius: 9px;
+        font-weight: 700;
+        letter-spacing: .01em;
+        box-shadow: none;
+      }
+      .btn-primary {
+        background: var(--adu-accent);
+        border-color: var(--adu-accent);
+      }
+      .btn-primary:hover { filter: brightness(.94); }
+
+      .container { max-width: 1180px; }
+      .content { padding-top: 1rem; padding-bottom: 2rem; }
+      .section { margin-top: 3.6rem; }
+      .section-header h3 {
+        margin-bottom: .35rem;
+        color: var(--adu-navy);
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        font-size: clamp(1.55rem, 2.4vw, 2rem);
+        letter-spacing: -.025em;
+      }
+      .section-line {
+        width: 58px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--adu-accent);
+      }
+      .panel {
+        background: var(--adu-white);
+        border: 1px solid var(--adu-line);
+        border-radius: 16px;
+        box-shadow: var(--adu-shadow);
+        padding: clamp(1.25rem, 2.5vw, 2rem);
+      }
+      .panel p:last-child { margin-bottom: 0; }
+      .muted { color: var(--adu-muted); }
+
+      .quick-facts {
+        max-width: 1120px;
+        margin: -24px auto 0;
+        position: relative;
+        z-index: 12;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: #fff;
+        border: 1px solid var(--adu-line);
+        border-radius: 14px;
+        box-shadow: var(--adu-shadow);
+        overflow: hidden;
+      }
+      .quick-fact { padding: 1rem 1.2rem; }
+      .quick-fact + .quick-fact { border-left: 1px solid var(--adu-line); }
+      .quick-fact-label {
+        display: block;
+        color: var(--adu-muted);
+        font-size: .78rem;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .quick-fact-value {
+        display: block;
+        margin-top: .18rem;
+        color: var(--adu-navy);
+        font-weight: 700;
+      }
+
+      .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
+      .chips span {
+        background: var(--adu-soft);
+        color: #2f4558;
+        border: 1px solid #e1e7ed;
+        border-radius: 999px;
+        padding: .5rem .78rem;
+        font-weight: 650;
+      }
+
+      .speaker-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .75rem;
+      }
+      .speaker-card {
+        min-height: 78px;
+        padding: .95rem 1rem;
+        border: 1px solid var(--adu-line);
+        border-radius: 11px;
+        background: #fbfcfd;
+      }
+      .speaker-card strong {
+        display: block;
+        color: var(--adu-navy);
+        font-family: "Inter", sans-serif;
+        font-size: .98rem;
+      }
+      .speaker-card span { color: var(--adu-muted); font-size: .92rem; }
+
+      .fee-table-wrap { border: 1px solid var(--adu-line); border-radius: 12px; overflow: hidden; }
+      .fee-table { margin: 0; width: 100%; border-collapse: collapse; }
+      .fee-table th {
+        background: var(--adu-navy);
+        color: #fff;
+        font-weight: 700;
+      }
+      .fee-table th, .fee-table td { padding: .85rem 1rem; }
+      .fee-table tbody tr + tr { border-top: 1px solid var(--adu-line); }
+      .fee-heading { color: var(--adu-navy); margin-top: 1.4rem; }
+
+      .info-banner {
+        margin-top: 1rem;
+        padding: 1rem 1.15rem;
+        border-left: 4px solid var(--adu-accent);
+        background: #f9f3f4;
+        border-radius: 8px;
+      }
+      .info-banner strong { color: var(--adu-navy); }
+
+      .visitor-intro {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 1rem;
+        margin-bottom: 1.1rem;
+      }
+      .visitor-card, .option-card {
+        border: 1px solid var(--adu-line);
+        background: #fbfcfd;
+        border-radius: 12px;
+        padding: 1rem 1.05rem;
+      }
+      .visitor-card h4, .option-card h5 {
+        margin-top: 0;
+        margin-bottom: .35rem;
+        color: var(--adu-navy);
+      }
+      .visitor-card p, .option-card p { margin: .25rem 0; }
+      .visitor-card a, .option-card a, .source-note a {
+        color: var(--adu-blue);
+        text-underline-offset: 2px;
+      }
+      .travel-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .85rem;
+        margin-top: .8rem;
+      }
+      .option-card .tag {
+        display: inline-block;
+        margin-bottom: .45rem;
+        padding: .2rem .48rem;
+        border-radius: 999px;
+        background: #eaf1f6;
+        color: #38536c;
+        font-size: .76rem;
+        font-weight: 750;
+        letter-spacing: .035em;
+        text-transform: uppercase;
+      }
+      .source-note {
+        margin-top: 1rem;
+        color: var(--adu-muted);
+        font-size: .9rem;
+      }
+
+      .organizer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .55rem .9rem;
+      }
+      .organizer-grid a {
+        display: block;
+        padding: .68rem .8rem;
+        border: 1px solid var(--adu-line);
+        border-radius: 9px;
+        background: #fbfcfd;
+        text-decoration: none;
+        color: var(--adu-navy);
+        font-weight: 650;
+      }
+      .organizer-grid a:hover { border-color: #bac7d4; }
+
+      .footer { padding-bottom: 2rem; }
+      .footer-card {
+        background: transparent;
+        color: var(--adu-muted);
+      }
+      .footer-card hr { border: 0; border-top: 1px solid var(--adu-line); }
+
+      @media (max-width: 900px) {
+        .quick-facts { grid-template-columns: repeat(2, 1fr); margin: 1rem 1rem 0; }
+        .quick-fact:nth-child(3) { border-left: 0; border-top: 1px solid var(--adu-line); }
+        .quick-fact:nth-child(4) { border-top: 1px solid var(--adu-line); }
+        .speaker-grid, .travel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .visitor-intro { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 620px) {
+        .hero { min-height: 570px; border-radius: 0; }
+        .hero-card { margin: 0 .7rem; padding: 1.4rem 1.25rem; }
+        .quick-facts { grid-template-columns: 1fr; }
+        .quick-fact + .quick-fact { border-left: 0; border-top: 1px solid var(--adu-line); }
+        .speaker-grid, .travel-grid, .organizer-grid { grid-template-columns: 1fr; }
+        .panel { border-radius: 12px; }
+      }
+    </style>
+
   </head>
   <body>
     <div class="appbar-wrap">
@@ -25,9 +321,10 @@
           <nav class="desktop-nav">
             <a href="#about">About</a>
             <a href="#scope">Scope</a>
-            <a href="#organizers">Organizers</a>
+            <a href="#speakers">Speakers</a>
             <a href="#registration">Registration</a>
-            <a href="#program">Program</a>
+            <a href="#visit">Venue &amp; Stay</a>
+            <a href="#organizers">Organizers</a>
             <a href="#gallery">Gallery</a>
           </nav>
         </div>
@@ -36,9 +333,10 @@
       <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
         <a href="#about">About</a>
         <a href="#scope">Scope</a>
-        <a href="#organizers">Organizers</a>
+        <a href="#speakers">Speakers</a>
         <a href="#registration">Registration</a>
-        <a href="#program">Program</a>
+        <a href="#visit">Venue &amp; Stay</a>
+        <a href="#organizers">Organizers</a>
         <a href="#gallery">Gallery</a>
       </nav>
     </div>
@@ -87,6 +385,25 @@
         </div>
       </section>
     </div>
+
+    <section class="quick-facts" aria-label="Conference at a glance">
+      <div class="quick-fact">
+        <span class="quick-fact-label">Dates</span>
+        <span class="quick-fact-value">16–20 November 2026</span>
+      </div>
+      <div class="quick-fact">
+        <span class="quick-fact-label">Host</span>
+        <span class="quick-fact-value">Western Sydney University</span>
+      </div>
+      <div class="quick-fact">
+        <span class="quick-fact-label">Conference</span>
+        <span class="quick-fact-value">10th Australian Algebra Conference</span>
+      </div>
+      <div class="quick-fact">
+        <span class="quick-fact-label">Contact</span>
+        <span class="quick-fact-value">adu@westernsydney.edu.au</span>
+      </div>
+    </section>
 
     <main class="container content">
       <section id="about" class="section">
@@ -142,29 +459,28 @@
       <section id="speakers" class="section">
         <div class="section-header">
           <div>
-            <h3>Speakers include:</h3>
+            <h3>Invited Speakers</h3>
             <div class="section-line"></div>
           </div>
         </div>
         <div class="panel">
-          <strong>
-          Peter Cameron (London)<br>
-              Kevin Coulembier (U. Sydney) <br> 
-            Chongying Dong (California) <br>  
-            Adam Dor-On (Haifa) <br> 
-            Murray Elder (UTS) <br> 
-            Daniel Goncalves (Florianópolis) <br>
-          Piotr M. Hajac (Warsaw)<br> 
-          Y.P. Lee (Taipei) <br> 
-            Francesca Mantese (Verona) <br>
-            Intan Muchtadi (Bandung) <br>
-            Lawrence Reeves (Melbourne) <br>
-          Nik Ruskuc (St. Andrews)<br>
-            Aidan Sims (UNSW)<br>
-            Wenyuan Yang (Beijing) <br>
-          Jiping Zhang (Beijing)<br>
-          </strong>
-          
+          <div class="speaker-grid">
+            <div class="speaker-card"><strong>Peter Cameron</strong><span>London</span></div>
+            <div class="speaker-card"><strong>Kevin Coulembier</strong><span>University of Sydney</span></div>
+            <div class="speaker-card"><strong>Chongying Dong</strong><span>California</span></div>
+            <div class="speaker-card"><strong>Adam Dor-On</strong><span>Haifa</span></div>
+            <div class="speaker-card"><strong>Murray Elder</strong><span>University of Technology Sydney</span></div>
+            <div class="speaker-card"><strong>Daniel Gonçalves</strong><span>Florianópolis</span></div>
+            <div class="speaker-card"><strong>Piotr M. Hajac</strong><span>Warsaw</span></div>
+            <div class="speaker-card"><strong>Y. P. Lee</strong><span>Taipei</span></div>
+            <div class="speaker-card"><strong>Francesca Mantese</strong><span>Verona</span></div>
+            <div class="speaker-card"><strong>Intan Muchtadi</strong><span>Bandung</span></div>
+            <div class="speaker-card"><strong>Lawrence Reeves</strong><span>Melbourne</span></div>
+            <div class="speaker-card"><strong>Nik Ruškuc</strong><span>St Andrews</span></div>
+            <div class="speaker-card"><strong>Aidan Sims</strong><span>UNSW</span></div>
+            <div class="speaker-card"><strong>Wenyuan Yang</strong><span>Beijing</span></div>
+            <div class="speaker-card"><strong>Jiping Zhang</strong><span>Beijing</span></div>
+          </div>
         </div>
       </section>
 
@@ -172,15 +488,12 @@
       <section id="registration" class="section">
         <div class="section-header">
           <div>
-            <h3>Registration</h3>
+            <h3>Registration &amp; Abstracts</h3>
             <div class="section-line"></div>
           </div>
         </div>
         <div class="panel">
-          <p>
-            Participants are requested to complete registration via the link below. 
-          </p>
-         
+          <p>Participants are requested to complete conference registration using the link below.</p>
 
           <h4 class="fee-heading">Registration Fees</h4>
           <div class="fee-table-wrap">
@@ -195,70 +508,173 @@
               <tbody>
                 <tr>
                   <td>Academic / General</td>
-                  <td>$180</td>
-                  <td>$220</td>
+                  <td>AUD 180</td>
+                  <td>AUD 220</td>
                 </tr>
                 <tr>
                   <td>Student / Postdoc / ECR</td>
-                  <td>$100</td>
-                  <td>$130</td>
+                  <td>AUD 100</td>
+                  <td>AUD 130</td>
                 </tr>
                 <tr>
                   <td>Conference Dinner Only</td>
-                  <td>$100</td>
-                  <td>$100</td>
+                  <td>AUD 100</td>
+                  <td>AUD 100</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="muted fee-note">
-            <i> <strong> Early-bird registration until 30 September 2026</strong> . </i> All fees are listed in Australian Dollars. <br>
 
-            Limited financial support may be available to assist student participants with travel and/or accommodation expenses. 
-            Students wishing to be considered for support should indicate this when submitting an abstract and provide a brief estimate of their travel and accommodation costs. 
-            Priority will be given to students whose contributed talks are accepted. 
+          <div class="info-banner">
+            <strong>Early-bird registration closes 30 September 2026.</strong>
+            All fees are in Australian dollars.
+          </div>
+
+          <p class="muted fee-note">
+            Limited financial support may be available to assist student participants with travel and/or accommodation expenses.
+            Students wishing to be considered for support should indicate this when submitting an abstract and provide a brief
+            estimate of their travel and accommodation costs. Priority will be given to students whose contributed talks are accepted.
             The amount of support offered will depend on the number of applications and the available budget.
           </p>
 
-           <p class="muted fee-note">
-
           <h4 class="fee-heading">Abstract Submission</h4>
-          <p><strong>Submit your abstract here: </strong> <a href="https://indico.global/e/algebradownunder">https://indico.global/e/algebradownunder</a></p>
+          <p>
+            Abstracts are submitted separately through the conference Indico page.
+            <a href="https://indico.global/e/algebradownunder" target="_blank" rel="noreferrer noopener">Open abstract submission</a>.
           </p>
-             
 
           <div class="registration-box">
             <a class="btn btn-primary block" href="https://payments.westernsydney.edu.au/ADU2026" target="_blank" rel="noreferrer noopener">Register &amp; Pay</a>
           </div>
         </div>
       </section>
-      
-      <section id="organizers" class="section">
+
+      <section id="visit" class="section">
         <div class="section-header">
           <div>
-            <h3>Organizers</h3>
+            <h3>Venue &amp; Visitor Information</h3>
             <div class="section-line"></div>
           </div>
         </div>
         <div class="panel">
-          <a href="mailto:J.East@westernsydney.edu.au"> James East</a> <br>
-           <a href="mailto:R.Hazrat@westernsydney.edu.au">Roozbeh Hazrat</a> <br>
-           <a href="mailto:Mengfan.Lyu@westernsydney.edu.au">Mengfan Lyu</a> <br>
-          <a href="mailto:C.Reid5@westernsydney.edu.au">Colin Reid</a> <br>
-         <a href="mailto:J.Schleischitz@westernsydney.edu.au"> Johannes Schleischitz</a> <br>
-          <a href="mailto:czamfirescu@gmail.com">Carol Zamfirescu</a> <br>
+          <div class="visitor-intro">
+            <div class="visitor-card">
+              <h4>Conference venue</h4>
+              <p><strong>Western Sydney University — Parramatta South Campus</strong></p>
+              <p>Victoria Road, Rydalmere NSW 2116</p>
+              <p class="muted">The conference is currently listed at Parramatta South Campus. Please check the final program for any room-specific information.</p>
+              <p><a href="https://www.westernsydney.edu.au/future/our-campuses/parramatta-south-campus" target="_blank" rel="noreferrer noopener">Campus and transport information</a></p>
+            </div>
+            <div class="visitor-card">
+              <h4>Staying in Parramatta CBD</h4>
+              <p>Parramatta Square is a practical base for visitors because it is close to Parramatta Station, dining and the University's Parramatta City campus.</p>
+              <p class="muted">Western Sydney University operates a free shuttle between its Parramatta City, North and South campuses. Participants should check the current timetable before travel.</p>
+              <p><a href="https://www.westernsydney.edu.au/future/our-campuses/parramatta-city-campus" target="_blank" rel="noreferrer noopener">Parramatta City campus information</a></p>
+            </div>
+          </div>
+
+          <h4 class="fee-heading">Accommodation near Parramatta Square</h4>
+          <p class="muted">The following are central Parramatta options for participants who prefer to stay near the station and Parramatta Square. Rates and availability vary, especially for conference dates.</p>
+          <div class="travel-grid">
+            <article class="option-card">
+              <span class="tag">Hotel</span>
+              <h5>PARKROYAL Parramatta</h5>
+              <p>30 Phillip Street, Parramatta</p>
+              <p>Central CBD location near Church Street dining and the river.</p>
+              <p><a href="https://www.panpacific.com/en/hotels-and-resorts/pr-parramatta.html" target="_blank" rel="noreferrer noopener">Hotel website</a></p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Hotel</span>
+              <h5>Novotel Sydney Parramatta</h5>
+              <p>350 Church Street, Parramatta</p>
+              <p>Central accommodation with convenient access to the Parramatta CBD.</p>
+              <p><a href="https://www.novotelparramatta.com.au/" target="_blank" rel="noreferrer noopener">Hotel website</a></p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Serviced suites</span>
+              <h5>Meriton Suites Church Street</h5>
+              <p>330 Church Street, Parramatta</p>
+              <p>Self-contained suites, useful for longer stays or shared accommodation.</p>
+              <p><a href="https://www.meritonsuites.com.au/our-hotels/nsw/western-sydney/church-street/" target="_blank" rel="noreferrer noopener">Hotel website</a></p>
+            </article>
+          </div>
+
+          <h4 class="fee-heading">Food &amp; coffee around Parramatta Square</h4>
+          <div class="travel-grid">
+            <article class="option-card">
+              <span class="tag">Restaurant</span>
+              <h5>LILYMU</h5>
+              <p>3 Parramatta Square, 153 Macquarie Street</p>
+              <p>Contemporary Pan-Asian dining; suitable for a sit-down meal.</p>
+              <p><a href="https://www.lilymu.com/" target="_blank" rel="noreferrer noopener">Restaurant website</a></p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Restaurant &amp; bar</span>
+              <h5>Ruse Bar &amp; Brasserie</h5>
+              <p>Parramatta Square, 12 Darcy Street</p>
+              <p>Modern brasserie dining with both casual bar and restaurant options.</p>
+              <p><a href="https://www.rusebarandbrasserie.com/" target="_blank" rel="noreferrer noopener">Restaurant website</a></p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Cafe</span>
+              <h5>The Naked Duck</h5>
+              <p>Lower Ground, 10 Darcy Street, Parramatta</p>
+              <p>A convenient weekday option for coffee, breakfast and light meals.</p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Japanese</span>
+              <h5>Mikazuki</h5>
+              <p>169 Macquarie Street, Parramatta</p>
+              <p>Modern Japanese dining on the ground floor of Western Sydney University's Parramatta City campus.</p>
+            </article>
+            <article class="option-card">
+              <span class="tag">Casual</span>
+              <h5>Parramatta Square retail precinct</h5>
+              <p>Additional options include cafés, quick-service outlets, restaurants and dessert venues in the Square itself.</p>
+              <p><a href="https://www.psq.com.au/retail/" target="_blank" rel="noreferrer noopener">View the current retail directory</a></p>
+            </article>
+            <article class="option-card">
+              <span class="tag">More nearby</span>
+              <h5>Church Street dining precinct</h5>
+              <p>Church Street provides a broader range of restaurants, cafés and bars within central Parramatta.</p>
+            </article>
+          </div>
+
+          <p class="source-note">
+            Visitor information checked on 30 September 2026. Hotel rates, restaurant trading hours and shuttle timetables can change; participants should verify details directly before booking or travelling.
+          </p>
         </div>
       </section>
 
+      <section id="organizers" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Organizing Committee</h3>
+            <div class="section-line"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="organizer-grid">
+            <a href="mailto:J.East@westernsydney.edu.au">James East</a>
+            <a href="mailto:R.Hazrat@westernsydney.edu.au">Roozbeh Hazrat</a>
+            <a href="mailto:Mengfan.Lyu@westernsydney.edu.au">Mengfan Lyu</a>
+            <a href="mailto:C.Reid5@westernsydney.edu.au">Colin Reid</a>
+            <a href="mailto:J.Schleischitz@westernsydney.edu.au">Johannes Schleischitz</a>
+            <a href="mailto:czamfirescu@gmail.com">Carol Zamfirescu</a>
+          </div>
+        </div>
+      </section>
 
-
-                <h3>Gallery</h3>
+      <section id="gallery" class="section">
+        <div class="section-header">
+          <div>
+            <h3>Gallery</h3>
             <div class="section-line"></div>
           </div>
         </div>
         <div class="panel">
           <article class="card center-text">
-            <p>Gallery content coming soon.</p>
+            <p class="muted">Gallery content will be added closer to the conference.</p>
           </article>
         </div>
       </section>
@@ -267,7 +683,7 @@
     <footer class="container footer">
       <div class="footer-card">
         <hr />
-        <p><strong>Contact for more details:</strong> <a href="mailto:adu@westernsydney.edu.au">adu@westernsydney.edu.au</a></p>
+        <p><strong>Conference enquiries:</strong> <a href="mailto:adu@westernsydney.edu.au">adu@westernsydney.edu.au</a></p>
         <p class="mark">Designed and maintained by <a href="https://github.com/rg-io" target="_blank" rel="noopener noreferrer">rg-io</a></p>
       </div>
     </footer>
