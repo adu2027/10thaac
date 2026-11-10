@@ -5,324 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algebra Down Under 2026 | 10th Australian Algebra Conference</title>
     <meta name="description" content="Algebra Down Under 2026, the 10th Australian Algebra Conference, at Western Sydney University, 16–20 November 2026." />
+    <meta name="theme-color" content="#0d2847" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/carousel_0.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
-
-    <style>
-      :root {
-        --adu-navy: #0d2847;
-        --adu-blue: #174f78;
-        --adu-accent: #b3262e;
-        --adu-text: #243241;
-        --adu-muted: #667584;
-        --adu-line: #dfe5ec;
-        --adu-soft: #f4f7fa;
-        --adu-white: #ffffff;
-        --adu-shadow: 0 14px 34px rgba(13, 40, 71, 0.08);
-      }
-
-      html { scroll-behavior: smooth; }
-      body {
-        color: var(--adu-text);
-        background: #f7f9fb;
-        font-family: "Source Sans 3", "Inter", Arial, sans-serif;
-        line-height: 1.65;
-      }
-
-      .appbar-wrap {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255,255,255,.97);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--adu-line);
-        box-shadow: 0 2px 12px rgba(13,40,71,.05);
-      }
-      .appbar, .toolbar { background: transparent; }
-      .toolbar { max-width: 1180px; margin: 0 auto; }
-      .brand-text {
-        font-family: "Inter", sans-serif;
-        font-weight: 900;
-        letter-spacing: .12em;
-        color: var(--adu-navy);
-      }
-      .desktop-nav a, .mobile-nav a {
-        color: #26384a;
-        font-weight: 650;
-        text-decoration: none;
-      }
-      .desktop-nav a:hover, .mobile-nav a:hover { color: var(--adu-accent); }
-
-      .hero-shell { max-width: 1460px; margin: 0 auto; }
-      .hero {
-        min-height: 610px;
-        border-radius: 0 0 26px 26px;
-        overflow: hidden;
-        box-shadow: 0 20px 55px rgba(12, 34, 57, .16);
-      }
-      .hero-overlay {
-        background: linear-gradient(90deg, rgba(5,22,39,.56) 0%, rgba(5,22,39,.38) 44%, rgba(5,22,39,.12) 100%);
-      }
-      .hero-card {
-        max-width: 760px;
-        padding: 2.2rem 2.35rem;
-        background: rgba(8, 28, 48, .56);
-        border: 1px solid rgba(255,255,255,.16);
-        border-radius: 18px;
-        box-shadow: 0 14px 34px rgba(0,0,0,.16);
-        backdrop-filter: blur(4px);
-      }
-      .hero-card h1 {
-        font-family: "Inter", sans-serif;
-        font-weight: 800;
-        letter-spacing: -.035em;
-        line-height: 1.04;
-      }
-      .hero-card h2 { margin-top: .6rem; font-weight: 600; }
-      .hero-badge {
-        width: fit-content;
-        padding: .42rem .7rem;
-        border-radius: 999px;
-        background: rgba(255,255,255,.10);
-        border: 1px solid rgba(255,255,255,.18);
-        font-weight: 650;
-        letter-spacing: .02em;
-      }
-      .hero-actions { gap: .65rem; }
-      .hero-actions > p {
-        width: 100%;
-        margin-top: .5rem;
-        color: rgba(255,255,255,.88);
-      }
-      .hero-actions > p a { color: #fff; text-decoration-thickness: 1px; }
-
-      .btn {
-        border-radius: 9px;
-        font-weight: 700;
-        letter-spacing: .01em;
-        box-shadow: none;
-      }
-      .btn-primary {
-        background: var(--adu-accent);
-        border-color: var(--adu-accent);
-      }
-      .btn-primary:hover { filter: brightness(.94); }
-
-      .container { max-width: 1180px; }
-      .content { padding-top: 1rem; padding-bottom: 2rem; }
-      .section { margin-top: 3.6rem; }
-      .section-header h3 {
-        margin-bottom: .35rem;
-        color: var(--adu-navy);
-        font-family: "Inter", sans-serif;
-        font-weight: 800;
-        font-size: clamp(1.55rem, 2.4vw, 2rem);
-        letter-spacing: -.025em;
-      }
-      .section-line {
-        width: 58px;
-        height: 3px;
-        border-radius: 3px;
-        background: var(--adu-accent);
-      }
-      .panel {
-        background: var(--adu-white);
-        border: 1px solid var(--adu-line);
-        border-radius: 16px;
-        box-shadow: var(--adu-shadow);
-        padding: clamp(1.25rem, 2.5vw, 2rem);
-      }
-      .panel p:last-child { margin-bottom: 0; }
-      .muted { color: var(--adu-muted); }
-
-      .quick-facts {
-        max-width: 1120px;
-        margin: -24px auto 0;
-        position: relative;
-        z-index: 12;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        background: #fff;
-        border: 1px solid var(--adu-line);
-        border-radius: 14px;
-        box-shadow: var(--adu-shadow);
-        overflow: hidden;
-      }
-      .quick-fact { padding: 1rem 1.2rem; }
-      .quick-fact + .quick-fact { border-left: 1px solid var(--adu-line); }
-      .quick-fact-label {
-        display: block;
-        color: var(--adu-muted);
-        font-size: .78rem;
-        font-weight: 800;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
-      .quick-fact-value {
-        display: block;
-        margin-top: .18rem;
-        color: var(--adu-navy);
-        font-weight: 700;
-      }
-
-      .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
-      .chips span {
-        background: var(--adu-soft);
-        color: #2f4558;
-        border: 1px solid #e1e7ed;
-        border-radius: 999px;
-        padding: .5rem .78rem;
-        font-weight: 650;
-      }
-
-      .speaker-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: .75rem;
-      }
-      .speaker-card {
-        min-height: 78px;
-        padding: .95rem 1rem;
-        border: 1px solid var(--adu-line);
-        border-radius: 11px;
-        background: #fbfcfd;
-      }
-      .speaker-card strong {
-        display: block;
-        color: var(--adu-navy);
-        font-family: "Inter", sans-serif;
-        font-size: .98rem;
-      }
-      .speaker-card span { color: var(--adu-muted); font-size: .92rem; }
-
-      .fee-table-wrap { border: 1px solid var(--adu-line); border-radius: 12px; overflow: hidden; }
-      .fee-table { margin: 0; width: 100%; border-collapse: collapse; }
-      .fee-table th {
-        background: var(--adu-navy);
-        color: #fff;
-        font-weight: 700;
-      }
-      .fee-table th, .fee-table td { padding: .85rem 1rem; }
-      .fee-table tbody tr + tr { border-top: 1px solid var(--adu-line); }
-      .fee-heading { color: var(--adu-navy); margin-top: 1.4rem; }
-
-      .info-banner {
-        margin-top: 1rem;
-        padding: 1rem 1.15rem;
-        border-left: 4px solid var(--adu-accent);
-        background: #f9f3f4;
-        border-radius: 8px;
-      }
-      .info-banner strong { color: var(--adu-navy); }
-
-      .visitor-intro {
-        display: grid;
-        grid-template-columns: 1.2fr .8fr;
-        gap: 1rem;
-        margin-bottom: 1.1rem;
-      }
-      .visitor-card, .option-card {
-        border: 1px solid var(--adu-line);
-        background: #fbfcfd;
-        border-radius: 12px;
-        padding: 1rem 1.05rem;
-      }
-      .visitor-card h4, .option-card h5 {
-        margin-top: 0;
-        margin-bottom: .35rem;
-        color: var(--adu-navy);
-      }
-      .visitor-card p, .option-card p { margin: .25rem 0; }
-      .visitor-card a, .option-card a, .source-note a {
-        color: var(--adu-blue);
-        text-underline-offset: 2px;
-      }
-      .travel-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: .85rem;
-        margin-top: .8rem;
-      }
-      .option-card .tag {
-        display: inline-block;
-        margin-bottom: .45rem;
-        padding: .2rem .48rem;
-        border-radius: 999px;
-        background: #eaf1f6;
-        color: #38536c;
-        font-size: .76rem;
-        font-weight: 750;
-        letter-spacing: .035em;
-        text-transform: uppercase;
-      }
-      .source-note {
-        margin-top: 1rem;
-        color: var(--adu-muted);
-        font-size: .9rem;
-      }
-
-      .organizer-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: .55rem .9rem;
-      }
-      .organizer-grid a {
-        display: block;
-        padding: .68rem .8rem;
-        border: 1px solid var(--adu-line);
-        border-radius: 9px;
-        background: #fbfcfd;
-        text-decoration: none;
-        color: var(--adu-navy);
-        font-weight: 650;
-      }
-      .organizer-grid a:hover { border-color: #bac7d4; }
-
-      .footer { padding-bottom: 2rem; }
-      .footer-card {
-        background: transparent;
-        color: var(--adu-muted);
-      }
-      .footer-card hr { border: 0; border-top: 1px solid var(--adu-line); }
-
-      @media (max-width: 900px) {
-        .quick-facts { grid-template-columns: repeat(2, 1fr); margin: 1rem 1rem 0; }
-        .quick-fact:nth-child(3) { border-left: 0; border-top: 1px solid var(--adu-line); }
-        .quick-fact:nth-child(4) { border-top: 1px solid var(--adu-line); }
-        .speaker-grid, .travel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .visitor-intro { grid-template-columns: 1fr; }
-      }
-      @media (max-width: 620px) {
-        .hero { min-height: 570px; border-radius: 0; }
-        .hero-card { margin: 0 .7rem; padding: 1.4rem 1.25rem; }
-        .quick-facts { grid-template-columns: 1fr; }
-        .quick-fact + .quick-fact { border-left: 0; border-top: 1px solid var(--adu-line); }
-        .speaker-grid, .travel-grid, .organizer-grid { grid-template-columns: 1fr; }
-        .panel { border-radius: 12px; }
-      }
-    </style>
-
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <div class="appbar-wrap">
-      <header class="appbar"> 
+      <header class="appbar">
         <div class="toolbar">
-            <div class="brand"><span class="brand-text">ADU</span></div>
-          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <a class="brand" href="#top" aria-label="Algebra Down Under, back to top">
+            <img class="brand-logo" src="assets/adu-logo.png" alt="" width="44" height="44" />
+            <span class="brand-text">ADU 2026</span>
+          </a>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
             &#9776;
           </button>
 
-          <nav class="desktop-nav">
+          <nav class="desktop-nav" aria-label="Main">
             <a href="#about">About</a>
             <a href="#scope">Scope</a>
             <a href="#speakers">Speakers</a>
-            <a href="#registration">Registration</a>
+            <a href="#prize" class="nav-prize">Student Prize</a>
+            <a href="#program">Program</a>
             <a href="#visit">Venue &amp; Stay</a>
             <a href="#organizers">Organizers</a>
             <a href="#gallery">Gallery</a>
@@ -330,20 +43,21 @@
         </div>
       </header>
 
-      <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <nav id="mobile-nav" class="mobile-nav" aria-hidden="true" aria-label="Mobile">
         <a href="#about">About</a>
         <a href="#scope">Scope</a>
         <a href="#speakers">Speakers</a>
-        <a href="#registration">Registration</a>
+        <a href="#prize">★ Student Prize</a>
+        <a href="#program">Program</a>
         <a href="#visit">Venue &amp; Stay</a>
         <a href="#organizers">Organizers</a>
         <a href="#gallery">Gallery</a>
       </nav>
     </div>
 
-    <div class="hero-shell">
-      <section class="hero">
-        <div class="hero-carousel">
+    <div class="hero-shell" id="top">
+      <section class="hero" aria-label="Algebra Down Under 2026">
+        <div class="hero-carousel" aria-hidden="true">
           <div class="hero-slide hero-slide-0 active"></div>
           <div class="hero-slide hero-slide-1"></div>
           <div class="hero-slide hero-slide-2"></div>
@@ -351,65 +65,52 @@
           <div class="hero-slide hero-slide-4"></div>
         </div>
         <div class="hero-overlay"></div>
-        <div class="hero-grain"></div>
-        <div class="hero-lines"></div>
 
         <div class="hero-content">
           <div class="hero-card">
-            <div class="hero-badge"><span class="dot"></span> November 2026 &bull; Sydney</div>
+            <div class="hero-badge"><span class="dot"></span> 10th Australian Algebra Conference</div>
             <h1>Algebra Down Under</h1>
-            <h2><span class="wsu">Western Sydney University</span></h2>
-            <p><strong>November 16 &ndash; 20, 2026 &bull; Sydney, Australia</strong></p>
-            <p class="hero-subtitle"><strong>The 10th Australian Algebra Conference</strong></p>
+            <div class="hero-meta">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                November 16 &ndash; 20, 2026
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                Western Sydney University, Sydney
+              </span>
+            </div>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://payments.westernsydney.edu.au/ADU2026" target="_blank" rel="noreferrer noopener">Register &amp; Pay</a>
-              <a class="btn btn-primary" href="https://indico.global/e/algebradownunder" target="_blank" rel="noreferrer noopener">Abstract Submission</a>
-              <a class="btn btn-primary" href="assets/ADU_poster.pdf" download="ADU_poster.pdf" target="_blank" rel="noreferrer noopener">Download Poster</a>
+              <a class="btn btn-primary" href="#program">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+                Timetable &amp; Abstracts
+              </a>
+              
             </div>
+            <p class="hero-poster"><a href="assets/ADU_poster.pdf" download="ADU_poster.pdf" target="_blank" rel="noreferrer noopener">Download the conference poster</a></p>
           </div>
         </div>
 
+        <div class="hero-dots" id="heroDots" role="group" aria-label="Choose slide">
+          <button type="button" class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button type="button" class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button type="button" class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+          <button type="button" class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+          <button type="button" class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+        </div>
         <button type="button" class="hero-arrow hero-arrow-left" id="prevSlide" aria-label="Previous slide">&#10094;</button>
         <button type="button" class="hero-arrow hero-arrow-right" id="nextSlide" aria-label="Next slide">&#10095;</button>
-        <div class="hero-dots" id="heroDots">
-          <span class="hero-dot active" data-slide="0"></span>
-          <span class="hero-dot" data-slide="1"></span>
-          <span class="hero-dot" data-slide="2"></span>
-          <span class="hero-dot" data-slide="3"></span>
-          <span class="hero-dot" data-slide="4"></span>
-        </div>
       </section>
     </div>
 
-    <section class="quick-facts" aria-label="Conference at a glance">
-      <div class="quick-fact">
-        <span class="quick-fact-label">Dates</span>
-        <span class="quick-fact-value">16–20 November 2026</span>
-      </div>
-      <div class="quick-fact">
-        <span class="quick-fact-label">Host</span>
-        <span class="quick-fact-value">Western Sydney University</span>
-      </div>
-      <div class="quick-fact">
-        <span class="quick-fact-label">Conference</span>
-        <span class="quick-fact-value">10th Australian Algebra Conference</span>
-      </div>
-      <div class="quick-fact">
-        <span class="quick-fact-label">Contact</span>
-        <span class="quick-fact-value">adu@westernsydney.edu.au</span>
-      </div>
-    </section>
-
     <main class="container content">
-      <section id="about" class="section">
+      <section id="about" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>About ADU</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Welcome</span>
+          <h3>About ADU</h3>
         </div>
-        <div class="panel">
+        <div class="panel about-panel">
           <p>
             Algebra Down Under (ADU), the <strong>10th Australian Algebra Conference</strong>, is an international
             meeting that brings together mathematicians from around the world. The conference will be held at
@@ -430,370 +131,231 @@
         </div>
       </section>
 
-      <section id="scope" class="section">
+      <section id="scope" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>Scientific Scope</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Topics</span>
+          <h3>Scientific Scope</h3>
         </div>
         <div class="panel">
           <div class="chips">
             <span>Representation Theory</span>
             <span>K-Theory</span>
-              <span> Universal Algebra and Category Theory</span>
+            <span>Universal Algebra and Category Theory</span>
             <span>Operator Algebras</span>
             <span>Non-commutative Algebras</span>
             <span>Group Theory</span>
             <span>Algebraic Geometry</span>
             <span>Semigroup Theory</span>
-             <span> Graph Theory and Coding Theory </span>
+            <span>Graph Theory and Coding Theory</span>
           </div>
         </div>
       </section>
 
-      <section id="speakers" class="section">
+     
+
+      <section id="speakers" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>Speakers Include</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Program</span>
+          <h3>Speakers Include</h3>
         </div>
         <div class="panel">
           <div class="speaker-grid">
 
- <div class="speaker-card">
-    <strong>
-      <a href="">
-        Reymond Akpanya
-      </a>
-    </strong>
-    <span>U. Sydney </span>
-  </div>
-
-            
-  <div class="speaker-card">
-    <strong>
-      <a href="https://www.st-andrews.ac.uk/mathematics-statistics/people/pjc20"
-         target="_blank" rel="noreferrer noopener">
-        Peter Cameron
-      </a>
-    </strong>
-    <span>University of St Andrews &amp; Queen Mary University of London (Emeritus)</span>
-  </div>
-
-<div class="speaker-card">
-    <strong>
-      <a href="https://www.st-andrews.ac.uk/mathematics-statistics/people/pjc20"
-         target="_blank" rel="noreferrer noopener">
-        Daniel Chan
-      </a>
-    </strong>
-    <span>UNSW Sydney</span>
-  </div>
-            
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://ssh.maths.usyd.edu.au/ut/people?sms=y&amp;who=K_Coulembier"
-         target="_blank" rel="noreferrer noopener">
-        Kevin Coulembier
-      </a>
-    </strong>
-    <span>University of Sydney</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://campusdirectory.ucsc.edu/cd_detail?uid=dong"
-         target="_blank" rel="noreferrer noopener">
-        Chongying Dong
-      </a>
-    </strong>
-    <span>University of California, Santa Cruz</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://adoronmath.wordpress.com/"
-         target="_blank" rel="noreferrer noopener">
-        Adam Dor-On
-      </a>
-    </strong>
-    <span>University of Haifa</span>
-  </div>
-
+            <div class="speaker-card">
+              <strong><a href="https://reymondakpanya.github.io/" target="_blank" rel="noreferrer noopener">Reymond Akpanya</a></strong>
+              <span>U. Sydney</span>
+            </div>
 
             <div class="speaker-card">
-    <strong>
-      <a href=""
-         target="_blank" rel="noreferrer noopener">
-        David Easdown
-      </a>
-    </strong>
-    <span>University of Sydney</span>
-  </div>
-
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://profiles.uts.edu.au/Murray.Elder"
-         target="_blank" rel="noreferrer noopener">
-        Murray Elder
-      </a>
-    </strong>
-    <span>University of Technology Sydney</span>
-  </div>
-
- <div class="speaker-card">
-    <strong>
-      <a href="">
-       Rhys John Evans
-      </a>
-    </strong>
-    <span>U. Sydney</span>
-  </div>
-            
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://ppgmpa.ufsc.br/corpo-docente-e-tecnico/membros-permanentes/daniel-goncalves/"
-         target="_blank" rel="noreferrer noopener">
-        Daniel Gonçalves
-      </a>
-    </strong>
-    <span>Universidade Federal de Santa Catarina</span>
-  </div>
+              <strong><a href="https://www.st-andrews.ac.uk/mathematics-statistics/people/pjc20" target="_blank" rel="noreferrer noopener">Peter Cameron</a></strong>
+              <span>University of St Andrews &amp; Queen Mary University of London (Emeritus)</span>
+            </div>
 
             <div class="speaker-card">
-    <strong>
-      <a href="">
-      Tom Goertzen
-      </a>
-    </strong>
-    <span>U. Sydney</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://www.impan.pl/~pmh/"
-         target="_blank" rel="noreferrer noopener">
-        Piotr M. Hajac
-      </a>
-    </strong>
-    <span>Institute of Mathematics, Polish Academy of Sciences</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://idv.sinica.edu.tw/ypleemath/"
-         target="_blank" rel="noreferrer noopener">
-        Y. P. Lee
-      </a>
-    </strong>
-    <span>Institute of Mathematics, Academia Sinica</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://www.di.univr.it/?ent=persona&amp;id=211&amp;lang=en"
-         target="_blank" rel="noreferrer noopener">
-        Francesca Mantese
-      </a>
-    </strong>
-    <span>University of Verona</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://multisite.itb.ac.id/math/algebra/intan-muchtadi/"
-         target="_blank" rel="noreferrer noopener">
-        Intan Muchtadi
-      </a>
-    </strong>
-    <span>Institut Teknologi Bandung</span>
-  </div>
-
-             <div class="speaker-card">
-    <strong>
-      <a href="https://math.ac.vn/staff/tran-giang-nam"
-         target="_blank" rel="noreferrer noopener">
-        Tran Giang Nam
-      </a>
-    </strong>
-    <span>Institute of Mathematics, Vietnam Academy of Science and Technology, Hanoi </span>
-  </div>
-
-<div class="speaker-card">
-    <strong>
-      <a href=""
-         target="_blank" rel="noreferrer noopener">
-        Li Ren
-      </a>
-    </strong>
-    <span>Sichuan University</span>
-  </div>
-
-            
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://www.st-andrews.ac.uk/mathematics-statistics/people/nr1"
-         target="_blank" rel="noreferrer noopener">
-        Nik Ruškuc
-      </a>
-    </strong>
-    <span>University of St Andrews</span>
-  </div>
-
-  <div class="speaker-card">
-    <strong>
-      <a href="https://www.unsw.edu.au/staff/aidan-sims"
-         target="_blank" rel="noreferrer noopener">
-        Aidan Sims
-      </a>
-    </strong>
-    <span>UNSW Sydney</span>
-  </div>
+              <strong><a href="https://www.unsw.edu.au/staff/daniel-chan" target="_blank" rel="noreferrer noopener">Daniel Chan</a></strong>
+              <span>UNSW Sydney</span>
+            </div>
 
             <div class="speaker-card">
-    <strong>
-      <a href="https://www.unsw.edu.au/staff/aidan-sims"
-         target="_blank" rel="noreferrer noopener">
-        Tim Stokes 
-      </a>
-    </strong>
-    <span>University of Waikato</span>
-  </div>
+              <strong><a href="https://ssh.maths.usyd.edu.au/ut/people?sms=y&amp;who=K_Coulembier" target="_blank" rel="noreferrer noopener">Kevin Coulembier</a></strong>
+              <span>University of Sydney</span>
+            </div>
 
-  <div class="speaker-card">
-    <strong>
-      <a href="https://faculty.bicmr.pku.edu.cn/~wyang/"
-         target="_blank" rel="noreferrer noopener">
-        Wenyuan Yang
-      </a>
-    </strong>
-    <span>Beijing International Center for Mathematical Research, Peking University</span>
-  </div>
+            <div class="speaker-card">
+              <strong><a href="https://campusdirectory.ucsc.edu/cd_detail?uid=dong" target="_blank" rel="noreferrer noopener">Chongying Dong</a></strong>
+              <span>University of California, Santa Cruz</span>
+            </div>
 
-  
-</div>
-        </div>
-      </section>
+            <div class="speaker-card">
+              <strong><a href="https://adoronmath.wordpress.com/" target="_blank" rel="noreferrer noopener">Adam Dor-On</a></strong>
+              <span>University of Haifa</span>
+            </div>
 
-        <section>
-          <div class="section-header">
-          <div>
-            <h3>Students talk, The Gordon Preston Prize</h3>
-            <div class="section-line"> </div>
- <p> The Gordon Preston Prize is awarded annually for the most outstanding student 
-            talk at the Australian Algebra Conference. The winner of the prize receives $300 and a certificate. 
-            The prize is named in honour of renowned semigroup theorist 
-            Professor Gordon Preston (Monash University), who played an important role in the 
-            instigation of the annual conference known over the years as the Algebra Conference of Victoria, 
-            the Victorian Algebra Conference and the Australian Algebra Conference.
- </p>
- <p>
- Student speakers are also eligible for the Brian Davey Encouragement Award, which was initiated in 2025 to honour 
-            the enormous contributions Brian has made to the conference series since its inception, and his strong encouragement and 
-            support of student and early career participants. 
-            <a href="https://sites.google.com/view/australianalgebragroup/brian-davey-encouragement-award" target="_blank" rel="noreferrer noopener">Brian Davey Encouragement Award</a>.
- </p>
-            
-          </div>
-        </div>
-        
-      </section>
+            <div class="speaker-card">
+              <strong><a href="https://www.maths.usyd.edu.au/u/de/" target="_blank" rel="noreferrer noopener">David Easdown</a></strong>
+              <span>University of Sydney</span>
+            </div>
 
+            <div class="speaker-card">
+              <strong><a href="https://profiles.uts.edu.au/Murray.Elder" target="_blank" rel="noreferrer noopener">Murray Elder</a></strong>
+              <span>University of Technology Sydney</span>
+            </div>
 
-  <section>
-          <div class="section-header">
-          <div>
-            <h3>Program, Talks and Abstracts</h3>
-            <div class="section-line"> </div>
+            <div class="speaker-card">
+              <strong><a href="https://rhysje00.github.io/" target="_blank" rel="noreferrer noopener">Rhys John Evans</a></strong>
+              <span>U. Sydney</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://ppgmpa.ufsc.br/corpo-docente-e-tecnico/membros-permanentes/daniel-goncalves/" target="_blank" rel="noreferrer noopener">Daniel Gonçalves</a></strong>
+              <span>Universidade Federal de Santa Catarina</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://tomgoertzen.github.io/" target="_blank" rel="noreferrer noopener">Tom Goertzen</a></strong>
+              <span>U. Sydney</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://www.impan.pl/~pmh/" target="_blank" rel="noreferrer noopener">Piotr M. Hajac</a></strong>
+              <span>Institute of Mathematics, Polish Academy of Sciences</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://idv.sinica.edu.tw/ypleemath/" target="_blank" rel="noreferrer noopener">Y. P. Lee</a></strong>
+              <span>Institute of Mathematics, Academia Sinica</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://www.di.univr.it/?ent=persona&amp;id=211&amp;lang=en" target="_blank" rel="noreferrer noopener">Francesca Mantese</a></strong>
+              <span>University of Verona</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://multisite.itb.ac.id/math/algebra/intan-muchtadi/" target="_blank" rel="noreferrer noopener">Intan Muchtadi</a></strong>
+              <span>Institut Teknologi Bandung</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://math.ac.vn/staff/tran-giang-nam" target="_blank" rel="noreferrer noopener">Tran Giang Nam</a></strong>
+              <span>Institute of Mathematics, Vietnam Academy of Science and Technology, Hanoi</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="" target="_blank" rel="noreferrer noopener">Li Ren</a></strong>
+              <span>Sichuan University</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://www.st-andrews.ac.uk/mathematics-statistics/people/nr1" target="_blank" rel="noreferrer noopener">Nik Ruškuc</a></strong>
+              <span>University of St Andrews</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://www.unsw.edu.au/staff/aidan-sims" target="_blank" rel="noreferrer noopener">Aidan Sims</a></strong>
+              <span>UNSW Sydney</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://scholar.google.com/citations?user=Pqby-04AAAAJ" target="_blank" rel="noreferrer noopener">Tim Stokes</a></strong>
+              <span>University of Waikato</span>
+            </div>
+
+            <div class="speaker-card">
+              <strong><a href="https://faculty.bicmr.pku.edu.cn/~wyang/" target="_blank" rel="noreferrer noopener">Wenyuan Yang</a></strong>
+              <span>Beijing International Center for Mathematical Research, Peking University</span>
+            </div>
 
           </div>
         </div>
-        
       </section>
 
+
+
+
+
+
+
+      <section id="prize" class="section reveal">
+        <div class="prize-panel">
+          <div class="prize-layout">
+            <div>
+              <span class="eyebrow">Student talks</span>
+              <h3>Students talk, The Gordon Preston Prize</h3>
+              <p>
+                The Gordon Preston Prize is awarded annually for the most outstanding student
+                talk at the Australian Algebra Conference. The winner of the prize receives $300 and a certificate.
+                The prize is named in honour of renowned semigroup theorist
+                Professor Gordon Preston (Monash University), who played an important role in the
+                instigation of the annual conference known over the years as the Algebra Conference of Victoria,
+                the Victorian Algebra Conference and the Australian Algebra Conference.
+              </p>
+              <p>
+                Student speakers are also eligible for the Brian Davey Encouragement Award, which was initiated in 2025 to honour
+                the enormous contributions Brian has made to the conference series since its inception, and his strong encouragement and
+                support of student and early career participants.
+                <a href="https://sites.google.com/view/australianalgebragroup/brian-davey-encouragement-award" target="_blank" rel="noreferrer noopener">Brian Davey Encouragement Award</a>.
+              </p>
+              <div class="prize-awards">
+                <span>🏆 Gordon Preston Prize &middot; $300 + certificate</span>
+                <span>✦ Brian Davey Encouragement Award</span>
+              </div>
+            </div>
+
+            <div class="gold-sticker" aria-hidden="true">
+              <svg class="seal" viewBox="0 0 120 120">
+                <defs>
+                  <linearGradient id="goldA" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff1b8" />
+                    <stop offset=".35" stop-color="#f1c24b" />
+                    <stop offset=".7" stop-color="#d9a12a" />
+                    <stop offset="1" stop-color="#a8740e" />
+                  </linearGradient>
+                  <linearGradient id="goldB" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ffe9a0" />
+                    <stop offset=".5" stop-color="#f6cf62" />
+                    <stop offset="1" stop-color="#c58e1c" />
+                  </linearGradient>
+                </defs>
+                <polygon fill="url(#goldA)" points="60.0,10.0 65.9,15.4 72.9,11.7 77.2,18.4 85.0,16.7 87.4,24.3 95.4,24.6 95.7,32.6 103.3,35.0 101.6,42.8 108.3,47.1 104.6,54.1 110.0,60.0 104.6,65.9 108.3,72.9 101.6,77.2 103.3,85.0 95.7,87.4 95.4,95.4 87.4,95.7 85.0,103.3 77.2,101.6 72.9,108.3 65.9,104.6 60.0,110.0 54.1,104.6 47.1,108.3 42.8,101.6 35.0,103.3 32.6,95.7 24.6,95.4 24.3,87.4 16.7,85.0 18.4,77.2 11.7,72.9 15.4,65.9 10.0,60.0 15.4,54.1 11.7,47.1 18.4,42.8 16.7,35.0 24.3,32.6 24.6,24.6 32.6,24.3 35.0,16.7 42.8,18.4 47.1,11.7 54.1,15.4" />
+                <circle cx="60" cy="60" r="38" fill="url(#goldB)" />
+                <circle cx="60" cy="60" r="34" fill="none" stroke="#8a5f07" stroke-opacity=".45" stroke-width="1" stroke-dasharray="2 2.5" />
+              </svg>
+              <div class="sticker-text">
+                <span class="star">★</span>
+                <span class="big">Student<br />Prize</span>
+                <span class="small">Gordon Preston</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="program" class="section">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="eyebrow">Program</span>
+            <h3>Timetable & Abstracts</h3>
+          </div>
       
-
-
-      <section id="registration" class="section">
-        <div class="section-header">
-          <div>
-            <h3>Registration &amp; Abstracts</h3>
-            <div class="section-line"></div>
-          </div>
         </div>
-        <div class="panel">
-          <p>Participants are requested to complete conference registration using the link below.</p>
-
-          <h4 class="fee-heading">Registration Fees</h4>
-          <div class="fee-table-wrap">
-            <table class="fee-table">
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Early Bird</th>
-                  <th>Standard</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Academic / General</td>
-                  <td>AUD 180</td>
-                  <td>AUD 220</td>
-                </tr>
-                <tr>
-                  <td>Student / Postdoc / ECR</td>
-                  <td>AUD 100</td>
-                  <td>AUD 130</td>
-                </tr>
-                <tr>
-                  <td>Conference Dinner Only</td>
-                  <td>AUD 100</td>
-                  <td>AUD 100</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="info-banner">
-            <strong>Early-bird registration closes 30 September 2026.</strong>
-            All fees are in Australian dollars.
-          </div>
-
-          <p class="muted fee-note">
-            Limited financial support may be available to assist student participants with travel and/or accommodation expenses.
-            Students wishing to be considered for support should indicate this when submitting an abstract and provide a brief
-            estimate of their travel and accommodation costs. Priority will be given to students whose contributed talks are accepted.
-            The amount of support offered will depend on the number of applications and the available budget.
-          </p>
-
-          <h4 class="fee-heading">Abstract Submission</h4>
-          <p>
-            Abstracts are submitted separately through the conference Indico page.
-            <a href="https://indico.global/e/algebradownunder" target="_blank" rel="noreferrer noopener">Open abstract submission</a>.
-          </p>
-
-          <div class="registration-box">
-            <a class="btn btn-primary block" href="https://payments.westernsydney.edu.au/ADU2026" target="_blank" rel="noreferrer noopener">Register &amp; Pay</a>
+        <div class="panel programme-panel">
+          <div id="programme-app">
+            <noscript>
+              <p>The interactive timetable needs JavaScript. You can still
+                <a href="assets/ADU_book_of_abstracts.pdf">download the Book of Abstracts (PDF)</a>.</p>
+            </noscript>
           </div>
         </div>
       </section>
 
-      <section id="visit" class="section">
+      <section id="visit" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>Venue &amp; Visitor Information</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Parramatta, Sydney</span>
+          <h3>Venue &amp; Visitor Information</h3>
         </div>
         <div class="panel">
-
-          <h4 class="fee-heading">Accommodation near Parramatta Square</h4>
+          <h4 class="sub-heading">Accommodation near Parramatta Square</h4>
           <p class="muted">The following are central Parramatta options for participants who prefer to stay near the station and Parramatta Square. Rates and availability vary.</p>
           <div class="travel-grid">
             <article class="option-card">
@@ -819,7 +381,7 @@
             </article>
           </div>
 
-          <h4 class="fee-heading">Food &amp; coffee around Parramatta Square</h4>
+          <h4 class="sub-heading">Food &amp; coffee around Parramatta Square</h4>
           <div class="travel-grid">
             <article class="option-card">
               <span class="tag">Restaurant</span>
@@ -859,16 +421,13 @@
               <p>Church Street provides a broader range of restaurants, cafés and bars within central Parramatta.</p>
             </article>
           </div>
-
-          </div>
+        </div>
       </section>
 
-      <section id="organizers" class="section">
+      <section id="organizers" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>Organizing Committee</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Contact</span>
+          <h3>Organizing Committee</h3>
         </div>
         <div class="panel">
           <div class="organizer-grid">
@@ -885,12 +444,10 @@
         </div>
       </section>
 
-      <section id="gallery" class="section">
+      <section id="gallery" class="section reveal">
         <div class="section-header">
-          <div>
-            <h3>Gallery</h3>
-            <div class="section-line"></div>
-          </div>
+          <span class="eyebrow">Moments</span>
+          <h3>Gallery</h3>
         </div>
         <div class="panel">
           <article class="card center-text">
@@ -900,60 +457,104 @@
       </section>
     </main>
 
-    <footer class="container footer">
-      <div class="footer-card">
-        <hr />
+    <footer class="footer">
+      <div class="container footer-card">
         <p><strong>Conference enquiries:</strong> <a href="mailto:adu@westernsydney.edu.au">adu@westernsydney.edu.au</a></p>
         <p class="mark">Designed and maintained by <a href="https://github.com/rg-io" target="_blank" rel="noopener noreferrer">rg-io</a></p>
       </div>
     </footer>
 
     <script>
+      // Mobile menu
       (function () {
         var menuToggle = document.getElementById('menu-toggle');
         var mobileNav = document.getElementById('mobile-nav');
+        if (!menuToggle || !mobileNav) return;
 
-        if (menuToggle && mobileNav) {
-          menuToggle.addEventListener('click', function () {
-            var isOpen = mobileNav.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-            mobileNav.setAttribute('aria-hidden', String(!isOpen));
-          });
-
-          var links = mobileNav.querySelectorAll('a');
-          for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function () {
-              mobileNav.classList.remove('open');
-              menuToggle.setAttribute('aria-expanded', 'false');
-              mobileNav.setAttribute('aria-hidden', 'true');
-            });
-          }
+        function setOpen(isOpen) {
+          mobileNav.classList.toggle('open', isOpen);
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          mobileNav.setAttribute('aria-hidden', String(!isOpen));
+          menuToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
         }
+
+        menuToggle.addEventListener('click', function () {
+          setOpen(!mobileNav.classList.contains('open'));
+        });
+
+        var links = mobileNav.querySelectorAll('a');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function () { setOpen(false); });
+        }
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 1080) setOpen(false);
+        });
       })();
 
+      // Speaker initials
+      (function () {
+        var cards = document.querySelectorAll('.speaker-card');
+        cards.forEach(function (card) {
+          var nameEl = card.querySelector('strong');
+          if (!nameEl) return;
+          var words = nameEl.textContent.trim().split(/\s+/);
+          var initials = (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : '')).toUpperCase();
+          var body = document.createElement('div');
+          while (card.firstChild) body.appendChild(card.firstChild);
+          var avatar = document.createElement('div');
+          avatar.className = 'avatar';
+          avatar.setAttribute('aria-hidden', 'true');
+          avatar.textContent = initials;
+          card.appendChild(avatar);
+          card.appendChild(body);
+        });
+      })();
+
+      // Reveal sections on scroll
+      (function () {
+        var items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          items.forEach(function (el) { el.classList.add('in'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        items.forEach(function (el) { io.observe(el); });
+      })();
+
+      // Hero carousel
       (function () {
         var slides = document.querySelectorAll('.hero-slide');
         var dots = document.querySelectorAll('.hero-dot');
         var prevBtn = document.getElementById('prevSlide');
         var nextBtn = document.getElementById('nextSlide');
-
+        var hero = document.querySelector('.hero');
         if (!slides.length) return;
 
         var current = 0;
         var intervalId;
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         function goToSlide(index) {
           slides[current].classList.remove('active');
           dots[current].classList.remove('active');
+          dots[current].removeAttribute('aria-current');
           current = (index + slides.length) % slides.length;
           slides[current].classList.add('active');
           dots[current].classList.add('active');
+          dots[current].setAttribute('aria-current', 'true');
         }
 
         function startAutoplay() {
-          intervalId = setInterval(function () {
-            goToSlide(current + 1);
-          }, 6000);
+          if (reduceMotion) return;
+          intervalId = setInterval(function () { goToSlide(current + 1); }, 6000);
         }
 
         function restartAutoplay() {
@@ -961,29 +562,29 @@
           startAutoplay();
         }
 
-        if (prevBtn) {
-          prevBtn.addEventListener('click', function () {
-            goToSlide(current - 1);
-            restartAutoplay();
-          });
-        }
-
-        if (nextBtn) {
-          nextBtn.addEventListener('click', function () {
-            goToSlide(current + 1);
-            restartAutoplay();
-          });
-        }
+        if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(current - 1); restartAutoplay(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goToSlide(current + 1); restartAutoplay(); });
 
         dots.forEach(function (dot, index) {
-          dot.addEventListener('click', function () {
-            goToSlide(index);
-            restartAutoplay();
-          });
+          dot.addEventListener('click', function () { goToSlide(index); restartAutoplay(); });
+        });
+
+        // Swipe on phones
+        var startX = null;
+        hero.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+        hero.addEventListener('touchend', function (e) {
+          if (startX === null) return;
+          var dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 50) { goToSlide(current + (dx < 0 ? 1 : -1)); restartAutoplay(); }
+          startX = null;
         });
 
         startAutoplay();
       })();
     </script>
+    <script src="programme.js"></script>
+    <script src="programme-ui.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" onload="window.aduRenderMath &amp;&amp; window.aduRenderMath()"></script>
   </body>
 </html>
