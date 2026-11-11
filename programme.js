@@ -16,17 +16,12 @@ window.ADU_PROGRAMME = (function () {
     /* ---------------- Monday ---------------- */
     {
       id: "I1", day: 0, kind: "Invited", num: 1, start: "9:30", end: "10:25", room: "EA.2.13", pdfPage: 3,
-      title: "A sharp bound for permutation closures of multiple context-free languages",
-      speaker: "Murray Elder",
-      authors: "Murray Elder<sup>1</sup>; Andrew Duncan; Lisa Frenkel",
-      affiliations: ["University of Technology Sydney"],
-      abstract: R`Let $S_n$ be the symmetric group on $n$ letters. Let $C$ be some class of formal languages, for example regular, context-free, multiple context-free, etc.
-
-Problem: if $L \subseteq \Sigma^*$ is a language in $C$, what kind of language is the $n$-permutation closure $\{w_{\sigma(1)} \cdots w_{\sigma(n)} \mid w_1 \cdots w_n \in L,\ w_i \in \Sigma^*,\ \sigma \in S_n\}$?
-
-For $k$-multiple context-free languages, we proved (with Mengfan Lyu) that the $n$-permutation closure is $k'$-multiple context-free, for some value of $k' \geq k$. In this work we address the question, how low can $k'$ go?
-
-This is joint work with Andrew Duncan and Lisa Frenkel.`
+      title: "Zappa-Szep products of categories and their homology",
+      speaker: "Aidan Sims",
+      authors: "Aidan Sims<sup>1</sup>",
+      coauthors: "Alexander Mundey<sup>2</sup>",
+      affiliations: ["University of New South Wales", "Adelaide University"],
+      abstract: R`Zappa-Szep products of groups generalise semidirect products to the situation where each group acts on the other. By analogy, one can make sense of a Zappa-Szep product of categories. This captures many interesting constructions including, for example, self-similar actions. The analogy with products suggests an analogue of the Kunneth formula for computing homology of these structures. I’ll outline how to prove such a theorem and how to use it to compute homology in a key class of examples.`
     },
     {
       id: "I2", day: 0, kind: "Invited", num: 2, start: "11:00", end: "11:55", room: "EA.2.13", pdfPage: 3,
@@ -62,7 +57,7 @@ Properties of group corresponding to a local action diagram can be determined fr
       abstract: R`The general linear groupoid of a Leavitt path algebra $L$ is isomorphic to the groupoid whose objects are all modules of the form $\bigoplus_{i=1}^{n} v_i L$, where each $v_i$ is a vertex, and whose morphisms are all isomorphisms between these modules. In this talk, I will present a generating set for the general linear groupoid of a Leavitt path algebra of a finite graph. This result yields generators for all general linear groups over the Leavitt path algebra, including the group of invertible elements. I will also discuss an extension of this result to Leavitt path algebras of finite hypergraphs (which embrace the Leavitt path algebras of finite separated and vertex-weighted graphs, as well as all Leavitt algebras $L(m,n)$).`
     },
     {
-      id: "C3", day: 0, kind: "Contributed", num: 3, start: "12:30", end: "12:55", room: "EA.2.21", pdfPage: 5,
+      id: "C3", day: 0, kind: "Contributed", num: 3, start: "12:30", end: "12:55", room: "EA.2.21", pdfPage: 4,
       title: "The p-local structure of algebraic groups of type A and finite classical groups",
       speaker: "Shuanyang Hu",
       authors: "Shuanyang Hu<sup>1</sup>",
@@ -71,11 +66,13 @@ Properties of group corresponding to a local action diagram can be determined fr
     },
     {
       id: "C4", day: 0, kind: "Contributed", num: 4, start: "12:30", end: "12:55", room: "EA.2.22", pdfPage: 5,
-      title: "What the talented monoid of a graph can see",
-      speaker: "Rafael Borges de Souza",
-      authors: "Rafael Borges de Souza<sup>1</sup>",
-      affiliations: ["Federal University of Santa Catarina"],
-      abstract: R`The talented monoid $T_E$ is a graded invariant associated with a directed graph $E$, arising naturally from the graded structure of the Leavitt path algebra $L_K(E)$. It can be realized as the monoid of graded finitely generated projective $L_K(E)$-modules and viewed as a graded analogue of the graph monoid $M_E$. In this work, we investigate how order-theoretic properties of $T_E$ reflect structural and dynamical features of the underlying graph. We establish connections between properties of the talented monoid and graph-theoretic features, including cycles, exits and periodicity. We then explore the extent to which $T_E$ can detect finer features of the graph that are not captured by the ordinary graph monoid $M_E$. In particular, we investigate whether and how properties of $T_E$ can be used to detect infinite emitters.`
+      title: "Strong Gradings on Weighted Leavitt Path Rings",
+      speaker: "Niña Jeane Adolfo",
+      authors: "Alfilgen Sebandal<sup>1</sup>; Johan Öinert<sup>2</sup>; Lyster Rey Cabardo<sup>3</sup>; Niña Jeane Adolfo<sup>3</sup>",
+      affiliations: ["Linnaeus University", "Blekinge Institute of Technology", "Mindanao State University-Iligan Institute of Technology"],
+      abstract: R`Leavitt path algebras associate algebraic structures to directed graphs. Weighted Leavitt path rings broaden this construction by assigning positive integer weights to the edges. When all edge weights are equal to one, the weighted Leavitt path ring coincides with the corresponding Leavitt path algebra, which we refer to as the unweighted Leavitt path ring. The weighted setting also accommodates the more general Leavitt algebras $L(m,n)$. Both unweighted and weighted Leavitt path rings admit a natural $\mathbb{Z}$-grading, in which vertices have degree 0, edges have degree 1, and ghost edges have degree $-1$. A graded ring $L = \bigoplus_{n \in \mathbb{Z}} L_n$ is strongly graded if $L_m L_n = L_{m+n}$ for all $m, n \in \mathbb{Z}$.
+
+In this talk, we describe when the natural $\mathbb{Z}$-grading of a weighted Leavitt path ring is strong and how this property is reflected in the structure of the underlying weighted graph. Using that strong $\mathbb{Z}$-gradedness for weighted Leavitt path rings can be determined through the condition $L_1 L_{-1} = L_0 = L_{-1} L_1$, we obtain several characterizations for row-finite weighted graphs involving the behavior of sources and sinks. These results show that the introduction of edge weights changes the strong-grading behavior of Leavitt path algebras.`
     },
     {
       id: "I3", day: 0, kind: "Invited", num: 3, start: "2:00", end: "2:55", room: "EA.2.13", pdfPage: 5,
@@ -138,12 +135,17 @@ This talk describes a new slice of Schottky space, motivated by McMullen’s thr
     /* ---------------- Tuesday ---------------- */
     {
       id: "I5", day: 1, kind: "Invited", num: 5, start: "9:30", end: "10:25", room: "EA.2.13", pdfPage: 9,
-      title: "Zappa-Szep products of categories and their homology",
-      speaker: "Aidan Sims",
-      authors: "Aidan Sims<sup>1</sup>",
-      coauthors: "Alexander Mundey<sup>2</sup>",
-      affiliations: ["University of New South Wales", "Adelaide University"],
-      abstract: R`Zappa-Szep products of groups generalise semidirect products to the situation where each group acts on the other. By analogy, one can make sense of a Zappa-Szep product of categories. This captures many interesting constructions including, for example, self-similar actions. The analogy with products suggests an analogue of the Kunneth formula for computing homology of these structures. I’ll outline how to prove such a theorem and how to use it to compute homology in a key class of examples.`
+      title: "A sharp bound for permutation closures of multiple context-free languages",
+      speaker: "Murray Elder",
+      authors: "Murray Elder<sup>1</sup>; Andrew Duncan; Lisa Frenkel",
+      affiliations: ["University of Technology Sydney"],
+      abstract: R`Let $S_n$ be the symmetric group on $n$ letters. Let $C$ be some class of formal languages, for example regular, context-free, multiple context-free, etc.
+
+Problem: if $L \subseteq \Sigma^*$ is a language in $C$, what kind of language is the $n$-permutation closure $\{w_{\sigma(1)} \cdots w_{\sigma(n)} \mid w_1 \cdots w_n \in L,\ w_i \in \Sigma^*,\ \sigma \in S_n\}$?
+
+For $k$-multiple context-free languages, we proved (with Mengfan Lyu) that the $n$-permutation closure is $k'$-multiple context-free, for some value of $k' \geq k$. In this work we address the question, how low can $k'$ go?
+
+This is joint work with Andrew Duncan and Lisa Frenkel.`
     },
     {
       id: "I6", day: 1, kind: "Invited", num: 6, start: "11:00", end: "11:55", room: "EA.2.13", pdfPage: 9,
@@ -155,12 +157,15 @@ This talk describes a new slice of Schottky space, motivated by McMullen’s thr
     },
     {
       id: "C9", day: 1, kind: "Contributed", num: 9, start: "12:00", end: "12:25", room: "EA.2.21", pdfPage: 9,
-      title: "Representations of Coxeter groups in the imaginary cone",
-      speaker: "Yuchun He",
-      authors: "Yuchun He<sup>2</sup>",
-      coauthors: "Lawrence Reeves<sup>1</sup>; Linxiao Xu; Xiang Fu<sup>2</sup>",
-      affiliations: ["School of Mathematics and Statistics University of Melbourne", "Beijing International Center for Mathematical Research Peking University"],
-      abstract: R`In this paper we introduce a novel construction of root systems for infinite non-affine Coxeter groups of finite rank. In the traditional approach, the root system $\Phi$ for a Coxeter system $(W, R)$ arises from the Tits representation, in which the abstract Coxeter group $W$ is mapped isomorphically into a subgroup of the general linear group of a finite-dimensional real vector space $V$ generated by reflections, which are special orthogonal transformations relative to a symmetric bilinear form $(\cdot,\cdot)$. The roots, which are the elements of $\Phi$, are representative normal vectors to the reflecting hyperplanes of these reflections. Various generalizations of this construction are well studied in the literature, and in almost all of these, a prototype of $\Phi$ is invariantly defined to be a $W$-stable subset of $V$ consisting of discrete vectors having the property that $(x, x) > 0$ for each $x \in \Phi$. In most constructions, these values are precisely 1. Here we introduce an entirely different approach to construct root systems for arbitrary infinite non-affine Coxeter groups $W$ of finite rank, still in the same space $V$, in which the analogue of roots are no longer discrete vectors in $V$ but suitably chosen hyperplanes in the so-called imaginary cone of $W$ in $V$, where $(u, v) \leq 0$ for any pair of vectors $u, v$ in this imaginary cone. Thus this new hyperplane prototype root system and the traditional root systems are separated by the isotropic set of the bilinear form $(\cdot,\cdot)$. We show that this new prototype of root system preserves most of the properties enjoyed in the traditional root system while at the same time literally exhibiting all the properties of the so-called walls corresponding to roots in geometric group theory. We also show that in rank 3, these new hyperplane prototypes of root systems possess natural asymptotic behaviours, and such asymptotic behaviours coincide with those introduced by Hohlweg et al. upon suitable projection and normalization. Strikingly, both models of asymptotic behaviour lead to the same limits in the isotropic set. This is a joint work with my supervisor Fu Xiang, Lawrence Reeves and Xu Linxiao.`
+      title: "Tilings of symmetric and alternating groups by conjugacy classes",
+      speaker: "Gabor Somlai",
+      authors: "Binzhou Xia<sup>1</sup>; Gabor Somlai<sup>1</sup>; Sanming Zhou<sup>1</sup>",
+      affiliations: ["The University of Melbourne"],
+      abstract: R`A pair $(X, Y)$ of subsets of a finite group $G$ is called a <em>tiling</em> of $G$ if every element of $G$ can be written uniquely in the form $xy$, where $x \in X$ and $y \in Y$. In this case, each of $X$ and $Y$ is a tile of $G$. Rothaus and Thompson, and later Fang and Xia studied whether the set of transpositions is a tile of $S_n$. Despite these works, this case remains open in $S_n$, except when $n$ satisfies certain non-divisibility conditions.
+
+We show that any conjugacy class of the symmetric group other than the trivial class and the class of transpositions does not tile the group. In the case of the alternating group, we also show that no normal set not containing the identity element tiles the group. We exclude some of the conjugacy classes using elementary combinatorial methods. However, for certain conjugacy classes containing elements of order two, this method does not work, so we rule those out using classical representation theory methods.
+
+This is joint work with Binzhou Xia and Sanming Zhou.`
     },
     {
       id: "C10", day: 1, kind: "Contributed", num: 10, start: "12:00", end: "12:25", room: "EA.2.22", pdfPage: 10,
@@ -229,7 +234,7 @@ Here, we give a much simpler version of ESN theorem for DRC-semigroups, using $\
       ]
     },
     {
-      id: "I8", day: 1, kind: "Invited", num: 8, start: "3:30", end: "4:25", room: "EA.2.13", pdfPage: 13,
+      id: "I8", day: 1, kind: "Invited", num: 8, start: "3:30", end: "4:25", room: "EA.2.13", pdfPage: 12,
       title: "Zhang twists of Leavitt path algebras",
       speaker: "Giang Nam Tran",
       authors: "Giang Nam Tran<sup>1</sup>",
@@ -238,20 +243,11 @@ Here, we give a much simpler version of ESN theorem for DRC-semigroups, using $\
     },
     {
       id: "C13", day: 1, kind: "Contributed", num: 13, start: "4:30", end: "4:55", room: "EA.2.21", pdfPage: 13,
-      title: "The maximal dimensions of path and graph algebras",
-      speaker: "Łukasz Kaczmarczyk",
-      authors: "Elisabeth A. Pacheco<sup>1</sup>; Mateusz Lowiel<sup>2</sup>; Piotr M. Hajac<sup>3</sup>; Łukasz Kaczmarczyk<sup>4</sup>",
-      affiliations: ["Western Sydney University", "Warsaw University", "IMPAN", "Uniwersytet Warszawski"],
-      abstract: R`This talk will focus on directed graphs and algebras associated to them.
-
-It will present the recent results concerning the following questions:
-
-- Given an acyclic directed graphs $E = (E^0, E^1, s, t)$ with no isolated vertices and $N > 0$ edges, what is the maximal possible dimension of its Path Algebra $KE$?
-- Given an acyclic directed graphs $E = (E^0, E^1, s, t)$ with no isolated vertices and $N > 0$ edges, what is the maximal possible dimension of its Leavitt Path Algebra $L_K(E)$?
-
-They provide not only the answer to the question of dimension, but also provide a graph for which the maximum is achieved, which come from a certain class of graphs with nice combinatorial properties.
-
-The talk is based on a joint work with P. M. Hajac, M. Lowiel and E. A. Pacheco.`
+      title: "What the talented monoid of a graph can see",
+      speaker: "Rafael Borges de Souza",
+      authors: "Rafael Borges de Souza<sup>1</sup>; Roozbeh Hazrat<sup>2</sup>; Anthony Warwick",
+      affiliations: ["Federal University of Santa Catarina", "Western Sydney University"],
+      abstract: R`The talented monoid $T_E$ is a graded invariant associated with a directed graph $E$, arising naturally from the graded structure of the Leavitt path algebra $L_K(E)$. It can be realized as the monoid of graded finitely generated projective $L_K(E)$-modules and viewed as a graded analogue of the graph monoid $M_E$. In this work, we investigate how order-theoretic properties of $T_E$ reflect structural and dynamical features of the underlying graph. We establish connections between properties of the talented monoid and graph-theoretic features, including cycles, exits and periodicity. We then explore the extent to which $T_E$ can detect finer features of the graph that are not captured by the ordinary graph monoid $M_E$. In particular, we investigate whether and how properties of $T_E$ can be used to detect infinite emitters.`
     },
     {
       id: "C14", day: 1, kind: "Contributed", num: 14, start: "4:30", end: "4:55", room: "EA.2.22", pdfPage: 13,
@@ -273,28 +269,28 @@ This research project is supervised by Jeremy Sumner and Luke Yates at the Unive
     },
     {
       id: "C15", day: 1, kind: "Contributed", num: 15, start: "5:00", end: "5:25", room: "EA.2.21", pdfPage: 14,
-      title: "Strong Gradings on Weighted Leavitt Path Rings",
-      speaker: "Niña Jeane Adolfo",
-      authors: "Alfilgen Sebandal<sup>1</sup>; Johan Öinert<sup>2</sup>; Lyster Rey Cabardo<sup>3</sup>; Niña Jeane Adolfo<sup>3</sup>",
-      affiliations: ["Linnaeus University", "Blekinge Institute of Technology", "Mindanao State University-Iligan Institute of Technology"],
-      abstract: R`Leavitt path algebras associate algebraic structures to directed graphs. Weighted Leavitt path rings broaden this construction by assigning positive integer weights to the edges. When all edge weights are equal to one, the weighted Leavitt path ring coincides with the corresponding Leavitt path algebra, which we refer to as the unweighted Leavitt path ring. The weighted setting also accommodates the more general Leavitt algebras $L(m,n)$. Both unweighted and weighted Leavitt path rings admit a natural $\mathbb{Z}$-grading, in which vertices have degree 0, edges have degree 1, and ghost edges have degree $-1$. A graded ring $L = \bigoplus_{n \in \mathbb{Z}} L_n$ is strongly graded if $L_m L_n = L_{m+n}$ for all $m, n \in \mathbb{Z}$.
+      title: "The maximal dimensions of path and graph algebras",
+      speaker: "Łukasz Kaczmarczyk",
+      authors: "Elisabeth A. Pacheco<sup>1</sup>; Mateusz Lowiel<sup>2</sup>; Piotr M. Hajac<sup>3</sup>; Łukasz Kaczmarczyk<sup>4</sup>",
+      affiliations: ["Western Sydney University", "Warsaw University", "IMPAN", "Uniwersytet Warszawski"],
+      abstract: R`This talk will focus on directed graphs and algebras associated to them.
 
-In this talk, we describe when the natural $\mathbb{Z}$-grading of a weighted Leavitt path ring is strong and how this property is reflected in the structure of the underlying weighted graph. Using that strong $\mathbb{Z}$-gradedness for weighted Leavitt path rings can be determined through the condition $L_1 L_{-1} = L_0 = L_{-1} L_1$, we obtain several characterizations for row-finite weighted graphs involving the behavior of sources and sinks. These results show that the introduction of edge weights changes the strong-grading behavior of Leavitt path algebras.`
+It will present the recent results concerning the following questions:
+
+- Given an acyclic directed graphs $E = (E^0, E^1, s, t)$ with no isolated vertices and $N > 0$ edges, what is the maximal possible dimension of its Path Algebra $\mathbb{K}E$?
+- Given an acyclic directed graphs $E = (E^0, E^1, s, t)$ with no isolated vertices and $N > 0$ edges, what is the maximal possible dimension of its Leavitt Path Algebra $L_{\mathbb{K}}(E)$?
+
+They provide not only the answer to the question of dimension, but also provide a graph for which the maximum is achieved, which come from a certain class of graphs with nice combinatorial properties.
+
+The talk is based on a joint work with P. M. Hajac, M. Lowiel and E. A. Pacheco.`
     },
     {
       id: "C16", day: 1, kind: "Contributed", num: 16, start: "5:00", end: "5:25", room: "EA.2.22", pdfPage: 14,
-      title: R`The Green ring of the Hopf algebra $\mathfrak{u}(\mathfrak{m})$`,
-      speaker: "Dirceu Bagio",
-      authors: "Dirceu Bagio<sup>1</sup>",
-      coauthors: "Daiana Flores; Saradia Flora; Nicolás Andruskiewitsch",
-      affiliations: ["Federal University of Santa Catariana"],
-      abstract: R`Let $\Bbbk$ be an algebraically closed field of characteristic 2 and $\mathfrak{s}$ the unique, up to isomorphism, not restricted simple Lie algebra of dimension 3 over $\Bbbk$ which has basis $\{e, h, f\}$ and bracket $[e, f] = h$, $[e, h] = e$ and $[f, h] = f$. The 2-closure $\mathfrak{m}$ of $\mathfrak{s}$ (that is, $\mathfrak{m}$ is the smallest restricted Lie algebra that contains $\mathfrak{s}$) is a 5-dimensional Lie algebra and its restricted enveloping algebra $\mathfrak{u}(\mathfrak{m})$ is generated by $e, f, h$ with defining relations
-$$ef + fe = h, \qquad eh + he = e, \qquad fh + hf = f, \qquad e^4 = f^4 = 0, \qquad h^2 + h = 0.$$
-It was proven in [ABFF2025] that $\mathfrak{u}(\mathfrak{m})$ is special biserial and hence it is of tame representation type [CB1995]. The finite-dimensional indecomposable $\mathfrak{u}(\mathfrak{m})$-modules are string or band modules. This new approach allows us to calculate the Green ring of $\mathfrak{u}(\mathfrak{m})$. This is a joint work with N. Andruskiewitsch, S. D. Flora and D. Flôres.`,
-      refs: [
-        R`[ABFF2025] N. Andruskiewitsch, D. Bagio, S. Della Flora and D. Flôres. <em>On the Drinfeld double of the restricted Jordan plane in characteristic 2.</em> J. Pure Appl. Algebra <strong>229</strong> (2025), no. 1, 107798.`,
-        R`[CB1995] W. Crawley-Boevey. <em>Tameness of biserial algebras.</em> Arch. Math. <strong>65</strong>, 399-407 (1995).`
-      ]
+      title: "Infinite non-uniform random graphs",
+      speaker: "Agnieszka Widz",
+      authors: "Agnieszka Widz<sup>1</sup>",
+      affiliations: ["Institute of Mathematics of the Polish Academy of Sciences"],
+      abstract: R`Let’s imagine a countable set of vertices and suppose that for each pair of vertices, we flip a coin to decide whether there is an edge between those two vertices or not. The classical result proved by Erdős and Reni states that almost always, the result of this operation is the same graph, known as the random graph. This graph forms a beautiful structure and is surprisingly ubiquitous. However, it has also been quite well studied and well known. In a paper with Ziemowit Kostana and Jarosław Swaczyna, we describe graphs that are also generated by coin flips but are not isomorphic to the Rado graph. We describe their properties and characterize them by a certain structural property.`
     },
 
     /* ---------------- Wednesday ---------------- */
@@ -337,11 +333,18 @@ This is joint work with Manoj Kumar Patel, Amit Sharma, and Pramod Kanwar.`,
     },
     {
       id: "C18", day: 2, kind: "Contributed", num: 18, start: "11:30", end: "11:55", room: "EA.2.22", pdfPage: 17,
-      title: "Characterizing (Co)Free Dagger Categories",
-      speaker: "JS Lemay",
-      authors: "JS Lemay<sup>1</sup>",
-      affiliations: ["Macquarie University"],
-      abstract: R`Dagger categories are the multiobject version of involutive monoids, in short they are categories with an involution operator which swaps the direction of the arrows. For any category there is both a free dagger category and a cofree dagger category over it. A natural question to ask is: given a dagger category, how can we tell if it is free or cofree without specifying an external base category? In this talk, I will describe characterizations of both free dagger categories and cofree dagger categories via internal dagger category structure. For cofree dagger categories, this characterization is given via enrichment over rectangular bands. For free dagger categories, this characterization is given via a zigzag decomposition. This talk is based on arXiv.2609.14285`
+      title: R`The Green ring of the Hopf algebra $\mathfrak{u}(\mathfrak{m})$`,
+      speaker: "Dirceu Bagio",
+      authors: "Dirceu Bagio<sup>1</sup>",
+      coauthors: "Daiana Flores; Saradia Flora; Nicolás Andruskiewitsch",
+      affiliations: ["Federal University of Santa Catariana"],
+      abstract: R`Let $\Bbbk$ be an algebraically closed field of characteristic 2 and $\mathfrak{s}$ the unique, up to isomorphism, not restricted simple Lie algebra of dimension 3 over $\Bbbk$ which has basis $\{e, h, f\}$ and bracket $[e, f] = h$, $[e, h] = e$ and $[f, h] = f$. The 2-closure $\mathfrak{m}$ of $\mathfrak{s}$ (that is, $\mathfrak{m}$ is the smallest restricted Lie algebra that contains $\mathfrak{s}$) is a 5-dimensional Lie algebra and its restricted enveloping algebra $\mathfrak{u}(\mathfrak{m})$ is generated by $e, f, h$ with defining relations
+$$ef + fe = h, \qquad eh + he = e, \qquad fh + hf = f, \qquad e^4 = f^4 = 0, \qquad h^2 + h = 0.$$
+It was proven in [ABFF2025] that $\mathfrak{u}(\mathfrak{m})$ is special biserial and hence it is of tame representation type [CB1995]. The finite-dimensional indecomposable $\mathfrak{u}(\mathfrak{m})$-modules are string or band modules. This new approach allows us to calculate the Green ring of $\mathfrak{u}(\mathfrak{m})$. This is a joint work with N. Andruskiewitsch, S. D. Flora and D. Flôres.`,
+      refs: [
+        R`[ABFF2025] N. Andruskiewitsch, D. Bagio, S. Della Flora and D. Flôres. <em>On the Drinfeld double of the restricted Jordan plane in characteristic 2.</em> J. Pure Appl. Algebra <strong>229</strong> (2025), no. 1, 107798.`,
+        R`[CB1995] W. Crawley-Boevey. <em>Tameness of biserial algebras.</em> Arch. Math. <strong>65</strong>, 399-407 (1995).`
+      ]
     },
     {
       id: "C19", day: 2, kind: "Contributed", num: 19, start: "12:00", end: "12:25", room: "EA.2.21", pdfPage: 18,
@@ -388,8 +391,8 @@ Here (i) and (ii) are jointly equivalent to (iii). Some of our results make use 
       abstract: R`The categories of real and of complex Hilbert spaces with bounded linear maps have received purely categorical characterisations by Chris Heunen and Andre Kornell. These characterisations are achieved through Solèr’s theorem, a result which shows that certain orthomodularity conditions on a Hermitian space over an involutive division ring result in a Hilbert space with the division ring being either the reals, complexes or quaternions. The characterisation by Heunen and Kornell makes use of a monoidal structure, which in turn excludes the category of quaternionic Hilbert spaces. We provide an alternative characterisation without the assumption of monoidal structure on the category. This new approach not only gives a new characterisation of the categories of real and of complex Hilbert spaces, but also the category of quaternionic Hilbert spaces.`
     },
     {
-      id: "C22", day: 2, kind: "Contributed", num: 22, start: "4:30", end: "4:55", room: "EA.2.22", pdfPage: 19,
-      title: R`A fibre-wise description of the power graph of $S_n$`,
+      id: "C22", day: 2, kind: "Contributed", num: 22, start: "4:30", end: "4:55", room: "EA.2.22", pdfPage: 20,
+      title: "A fibre-wise description of the power graph of $S_n$",
       speaker: "V Aruna",
       authors: "V Aruna<sup>1</sup>; Krishnan Paramasivam<sup>1</sup>; Peter J Cameron<sup>2</sup>",
       affiliations: ["National Institute of Technology Calicut", "University of St Andrews"],
@@ -410,16 +413,13 @@ This is a joint work with my Ph.D. supervisor, Dr. Krishnan Paramasivam, Departm
 We show that every bimodule species of infinite representation type is derived-equivalent to the “noncommutative Proj” of its preprojective algebra; extending a result of Minamoto for path algebras of quivers. Over a perfect field, this encompasses all hereditary finite-dimensional algebras of infinite representation type. The key ingredient in this result is a new characterisation of the categories of coherent sheaves on large class of noncommutative projective schemes. We will discuss how this characterisation works, as well as how we can use it to construct the “noncommutative Proj” of a preprojective algebra and the aforementioned derived-equivalences.`
     },
     {
-      id: "C24", day: 2, kind: "Contributed", num: 24, start: "5:00", end: "5:25", room: "EA.2.22", pdfPage: 20,
-      title: "Tilings of symmetric and alternating groups by conjugacy classes",
-      speaker: "Gabor Somlai",
-      authors: "Binzhou Xia<sup>1</sup>; Gabor Somlai<sup>1</sup>; Sanming Zhou<sup>1</sup>",
-      affiliations: ["The University of Melbourne"],
-      abstract: R`A pair $(X, Y)$ of subsets of a finite group $G$ is called a <em>tiling</em> of $G$ if every element of $G$ can be written uniquely in the form $xy$, where $x \in X$ and $y \in Y$. In this case, each of $X$ and $Y$ is a tile of $G$. Rothaus and Thompson, and later Fang and Xia studied whether the set of transpositions is a tile of $S_n$. Despite these works, this case remains open in $S_n$, except when $n$ satisfies certain non-divisibility conditions.
-
-We show that any conjugacy class of the symmetric group other than the trivial class and the class of transpositions does not tile the group. In the case of the alternating group, we also show that no normal set not containing the identity element tiles the group. We exclude some of the conjugacy classes using elementary combinatorial methods. However, for certain conjugacy classes containing elements of order two, this method does not work, so we rule those out using classical representation theory methods.
-
-This is joint work with Binzhou Xia and Sanming Zhou.`
+      id: "C24", day: 2, kind: "Contributed", num: 24, start: "5:00", end: "5:25", room: "EA.2.22", pdfPage: 21,
+      title: "Representations of Coxeter groups in the imaginary cone",
+      speaker: "Yuchun He",
+      authors: "Yuchun He<sup>2</sup>",
+      coauthors: "Lawrence Reeves<sup>1</sup>; Linxiao Xu; Xiang Fu<sup>2</sup>",
+      affiliations: ["School of Mathematics and Statistics University of Melbourne", "Beijing International Center for Mathematical Research Peking University"],
+      abstract: R`In this paper we introduce a novel construction of root systems for infinite non-affine Coxeter groups of finite rank. In the traditional approach, the root system $\Phi$ for a Coxeter system $(W, R)$ arises from the Tits representation, in which the abstract Coxeter group $W$ is mapped isomorphically into a subgroup of the general linear group of a finite-dimensional real vector space $V$ generated by reflections, which are special orthogonal transformations relative to a symmetric bilinear form $(\cdot,\cdot)$. The roots, which are the elements of $\Phi$, are representative normal vectors to the reflecting hyperplanes of these reflections. Various generalizations of this construction are well studied in the literature, and in almost all of these, a prototype of $\Phi$ is invariantly defined to be a $W$-stable subset of $V$ consisting of discrete vectors having the property that $(x, x) > 0$ for each $x \in \Phi$. In most constructions, these values are precisely 1. Here we introduce an entirely different approach to construct root systems for arbitrary infinite non-affine Coxeter groups $W$ of finite rank, still in the same space $V$, in which the analogue of roots are no longer discrete vectors in $V$ but suitably chosen hyperplanes in the so-called imaginary cone of $W$ in $V$, where $(u, v) \leq 0$ for any pair of vectors $u, v$ in this imaginary cone. Thus this new hyperplane prototype root system and the traditional root systems are separated by the isotropic set of the bilinear form $(\cdot,\cdot)$. We show that this new prototype of root system preserves most of the properties enjoyed in the traditional root system while at the same time literally exhibiting all the properties of the so-called walls corresponding to roots in geometric group theory. We also show that in rank 3, these new hyperplane prototypes of root systems possess natural asymptotic behaviours, and such asymptotic behaviours coincide with those introduced by Hohlweg et al. upon suitable projection and normalization. Strikingly, both models of asymptotic behaviour lead to the same limits in the isotropic set. This is a joint work with my supervisor Fu Xiang, Lawrence Reeves and Xu Linxiao.`
     },
 
     /* ---------------- Thursday ---------------- */
@@ -553,7 +553,33 @@ In this talk, I will present recent advances in understanding the relationship b
 The proofs of the new results on the graded classification conjectures were AI assisted.`
     },
     {
-      id: "C28", day: 4, kind: "Contributed", num: 28, start: "3:00", end: "3:25", room: "EB.G.18", pdfPage: 27,
+      id: "C28", day: 4, kind: "Contributed", num: 28, start: "3:30", end: "3:55", room: "EB.G.18", pdfPage: 27,
+      title: "Characterizing (Co)Free Dagger Categories",
+      speaker: "JS Lemay",
+      authors: "JS Lemay<sup>1</sup>",
+      affiliations: ["Macquarie University"],
+      abstract: R`Dagger categories are the multiobject version of involutive monoids, in short they are categories with an involution operator which swaps the direction of the arrows. For any category there is both a free dagger category and a cofree dagger category over it. A natural question to ask is: given a dagger category, how can we tell if it is free or cofree without specifying an external base category? In this talk, I will describe characterizations of both free dagger categories and cofree dagger categories via internal dagger category structure. For cofree dagger categories, this characterization is given via enrichment over rectangular bands. For free dagger categories, this characterization is given via a zigzag decomposition. This talk is based on arXiv.2609.14285`
+    },
+    {
+      id: "C29", day: 4, kind: "Contributed", num: 29, start: "4:00", end: "4:25", room: "EB.G.18", pdfPage: 28,
+      title: "Free algebras in some locally finite varieties of reducts of Heyting algebras: a generic method",
+      speaker: "Tomasz Kowalski",
+      authors: "Tomasz Kowalski<sup>1</sup>; Katarzyna Słomczyńska<sup>2</sup>",
+      affiliations: ["Jagiellonian U., Kraków, Poland", "U. of the National Education Commission, Poland"],
+      abstract: R`Heyting algebras are the second, after Boolean algebras, most famous class of algebras with obvious connections to logic. None of the operations of Heyting algebras (except the constant 1), in the signature $(\wedge, \vee, \to, 0, 1)$ is term-definable from the others, so it is natural to consider reducts, and indeed subreducs, for these tend to form varieties. Of particular interest are subreducts to the signatures: $(\to, 1)$, known as <em>Hilbert algebras</em>; $(\to, 0, 1)$, known as <em>Hilbert algebras with zero</em>; $(\wedge, \to, 1)$, known as <em>Brouwerian semilattices</em>; $(\wedge, \to, 0, 1)$, known as <em>Brouwerian semilattices with zero</em>. All of these, unlike Heyting algebras, are locally finite, so constructing free finitely generated algebras is clearly of interest.
+
+Some such constructions exist, a number of them quite old: de Bruijn [B1975] gives a syntactic construction applicable to Brouwerian semilattices and (in principle) to Hilbert algebras, which is then partly used in Köhler [K1981] to construct 3-generated free Brouwerian semilattice: it has $623\,662\,965\,552\,330$ elements. Independently, Krzystek [K1977] constructs the same (the numbers agree).
+
+We give a uniform method of building the free $n$-generated algebra in an arbitrary subvariety $\mathcal{V}$ of Hilbert algebras and Brouwerian semilattices, with or without zero. Our method is universal-algebraic: we build the free algebra $\mathbf{F}_{\mathcal{V}}(X)$ out of its ordered set of completely meet-irreducible congruences, which in turn is determined by the subdirectly irreducible algebras in $\mathcal{V}$. If subdirectly irreducible algebras in $\mathcal{V}$ admit an effective description, our method is algorithmic [KS2026]. Turned into a C progam (with a little help of you-know-who) it yields numbers. For example, the free 3-generated Hilbert algebra with zero has $12\,290 \cdots \approx 10^{647}$ elements; in the subvariety <em>of width 2</em> of Hilbert algebras with zero, the free 4-generated algebra has $19\,182 \cdots \approx 10^{1208}$ elements.`,
+      refs: [
+        R`[B1975] N. G. de Bruijn. Exact finite models for minimal propositional calculus over a finite alphabet. Technical Report EUT Report 75-WSK-02, Eindhoven University of Technology, Eindhoven, The Netherlands, 1975.`,
+        R`[K1981] P. Köhler. Brouwerian semilattices. <em>Trans. Amer. Math. Soc.</em>, 268(1):103–126, 1981.`,
+        R`[K1977] P. S. Krzystek. On the free relatively pseudocomplemented semilattice with three generators. <em>Rep. Math. Logic</em>, (9):31–38, 1977.`,
+        R`[KS2026] T. Kowalski and K. Słomczyńska. A generic construction of free algebras in varieties of Hilbert algebras and Brouwerian semilattices. arXiv:2607.18852`
+      ]
+    },
+    {
+      id: "C30", day: 4, kind: "Contributed", num: 30, start: "4:30", end: "4:55", room: "EB.G.18", pdfPage: 29,
       title: "Data provenance through the eyes of algebra and relevant logic",
       speaker: "Marcel Jackson",
       authors: "Marcel Jackson<sup>1</sup>",
@@ -652,9 +678,11 @@ In this talk we show how to translate relevant logic to lineage provenance, and 
         { type: "plenary", talk: "I20" },
         { type: "break", start: "1:00", end: "2:00", label: "Lunch", room: null, tone: "plum" },
         { type: "plenary", talk: "I21" },
+        { type: "break", start: "3:00", end: "3:30", label: "Afternoon Tea", room: "EB.G.21" },
         { type: "plenary", talk: "C28" },
-        { type: "event", start: "3:30", end: "4:00", label: "Closing", room: "EB.G.18" },
-        { type: "break", start: "4:00", end: "4:30", label: "Afternoon Tea", room: "EB.G.21" }
+        { type: "plenary", talk: "C29" },
+        { type: "plenary", talk: "C30" },
+        { type: "event", start: "5:00", end: "5:30", label: "Closing", room: "EB.G.18" }
       ]
     }
   ];
@@ -662,7 +690,7 @@ In this talk we show how to translate relevant logic to lineage provenance, and 
   return {
     venue: "Western Sydney University, Parramatta South Campus",
     pdf: "assets/ADU_book_of_abstracts.pdf",
-    pdfPageOffset: 6, // printed page 1 is page 7 of the PDF file
+    pdfPageOffset: 6,
     rooms: rooms,
     talks: talks,
     days: days
