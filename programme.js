@@ -367,7 +367,7 @@ Here (i) and (ii) are jointly equivalent to (iii). Some of our results make use 
       abstract: R`Classic Lie theory establishes a correspondence between Lie groups, which are internal group objects in the category of smooth manifolds, and Lie algebras. An analogous correspondence also exists for group objects in affine schemes. Both smooth manifolds and affine schemes form tangent categories, which provide a categorical context for differential geometry. In this talk, we show how the Lie correspondence can be constructed entirely from the tangent structure. We define Lie groups in a tangent category and construct the internal Lie algebra as the representing object of a certain functor. Lastly, we show that our construction generalizes the usual Lie correspondence in both differential and algebraic geometry.`
     },
     {
-      id: "I11", day: 2, kind: "Invited", num: 11, start: "2:00", end: "2:55", room: "EA.2.13", pdfPage: 18,
+      id: "I11", day: 2, kind: "Invited", num: 11, start: "2:00", end: "2:55", room: "EA.2.13", pdfPage: 19,
       title: "Injective modules over Leavitt path algebras",
       speaker: "Francesca Mantese",
       authors: "Francesca Mantese<sup>1</sup>",
@@ -553,12 +553,16 @@ In this talk, I will present recent advances in understanding the relationship b
 The proofs of the new results on the graded classification conjectures were AI assisted.`
     },
     {
-      id: "C28", day: 4, kind: "Contributed", num: 28, start: "3:30", end: "3:55", room: "EB.G.18", pdfPage: 27,
-      title: "Characterizing (Co)Free Dagger Categories",
-      speaker: "JS Lemay",
-      authors: "JS Lemay<sup>1</sup>",
-      affiliations: ["Macquarie University"],
-      abstract: R`Dagger categories are the multiobject version of involutive monoids, in short they are categories with an involution operator which swaps the direction of the arrows. For any category there is both a free dagger category and a cofree dagger category over it. A natural question to ask is: given a dagger category, how can we tell if it is free or cofree without specifying an external base category? In this talk, I will describe characterizations of both free dagger categories and cofree dagger categories via internal dagger category structure. For cofree dagger categories, this characterization is given via enrichment over rectangular bands. For free dagger categories, this characterization is given via a zigzag decomposition. This talk is based on arXiv.2609.14285`
+      id: "C28", day: 4, kind: "Contributed", num: 28, start: "3:00", end: "3:25", room: "EB.G.18", pdfPage: 27,
+      title: "Data provenance through the eyes of algebra and relevant logic",
+      speaker: "Marcel Jackson",
+      authors: "Marcel Jackson<sup>1</sup>",
+      affiliations: ["La Trobe University"],
+      abstract: R`Data provenance concerns extension of the Boolean true-false model for database queries to more expressive languages that record not just the existence of solutions but features such as the range of solutions, their source, their robustness and so on. From an algebraic perspective, a semiring supplants the usual true-false Boolean algebra as the apparatus measuring truth, with different varieties of semirings capturing different powers of provenance detection. “Lineage provenance” for example, captures the ability to identify the subset of records that are relevant to a database query, and the semiring semantics are multiplicatively commutative and idempotent.
+
+Relevant logic is a non-classical logic where the truth of implications depends on the degree to which the antecedent is relevant to the consequent. The logical semantics are again semirings.
+
+In this talk we show how to translate relevant logic to lineage provenance, and then explore the algebraic properties of “lineage semirings”, focussing in particular on the operation of monus, which has previously been used to provide a form of negation in semiring-based truth semantics.`
     },
     {
       id: "C29", day: 4, kind: "Contributed", num: 29, start: "4:00", end: "4:25", room: "EB.G.18", pdfPage: 28,
@@ -580,15 +584,11 @@ We give a uniform method of building the free $n$-generated algebra in an arbitr
     },
     {
       id: "C30", day: 4, kind: "Contributed", num: 30, start: "4:30", end: "4:55", room: "EB.G.18", pdfPage: 29,
-      title: "Data provenance through the eyes of algebra and relevant logic",
-      speaker: "Marcel Jackson",
-      authors: "Marcel Jackson<sup>1</sup>",
-      affiliations: ["La Trobe University"],
-      abstract: R`Data provenance concerns extension of the Boolean true-false model for database queries to more expressive languages that record not just the existence of solutions but features such as the range of solutions, their source, their robustness and so on. From an algebraic perspective, a semiring supplants the usual true-false Boolean algebra as the apparatus measuring truth, with different varieties of semirings capturing different powers of provenance detection. “Lineage provenance” for example, captures the ability to identify the subset of records that are relevant to a database query, and the semiring semantics are multiplicatively commutative and idempotent.
-
-Relevant logic is a non-classical logic where the truth of implications depends on the degree to which the antecedent is relevant to the consequent. The logical semantics are again semirings.
-
-In this talk we show how to translate relevant logic to lineage provenance, and then explore the algebraic properties of “lineage semirings”, focussing in particular on the operation of monus, which has previously been used to provide a form of negation in semiring-based truth semantics.`
+      title: "Characterizing (Co)Free Dagger Categories",
+      speaker: "JS Lemay",
+      authors: "JS Lemay<sup>1</sup>",
+      affiliations: ["Macquarie University"],
+      abstract: R`Dagger categories are the multiobject version of involutive monoids, in short they are categories with an involution operator which swaps the direction of the arrows. For any category there is both a free dagger category and a cofree dagger category over it. A natural question to ask is: given a dagger category, how can we tell if it is free or cofree without specifying an external base category? In this talk, I will describe characterizations of both free dagger categories and cofree dagger categories via internal dagger category structure. For cofree dagger categories, this characterization is given via enrichment over rectangular bands. For free dagger categories, this characterization is given via a zigzag decomposition. This talk is based on arXiv.2609.14285`
     }
   ];
 
@@ -641,7 +641,7 @@ In this talk we show how to translate relevant logic to lineage provenance, and 
         { type: "plenary", talk: "I10" },
         { type: "parallel", talks: ["C17", "C18"] },
         { type: "parallel", talks: ["C19", "C20"] },
-        { type: "break", start: "12:30", end: "1:00", label: "Lunch", room: null, tone: "plum" },
+        { type: "break", start: "12:30", end: "1:00", label: "Conference photo and Lunch", room: null, tone: "plum" },
         { type: "event", start: "1:00", end: "2:00", label: "AAG Meeting", room: "EHa.1.30" },
         { type: "plenary", talk: "I11" },
         { type: "break", start: "3:00", end: "3:30", label: "Afternoon Tea", room: "EA.2.30" },
@@ -678,8 +678,8 @@ In this talk we show how to translate relevant logic to lineage provenance, and 
         { type: "plenary", talk: "I20" },
         { type: "break", start: "1:00", end: "2:00", label: "Lunch", room: null, tone: "plum" },
         { type: "plenary", talk: "I21" },
-        { type: "break", start: "3:00", end: "3:30", label: "Afternoon Tea", room: "EB.G.21" },
         { type: "plenary", talk: "C28" },
+        { type: "break", start: "3:30", end: "4:00", label: "Afternoon Tea", room: "EB.G.21" },
         { type: "plenary", talk: "C29" },
         { type: "plenary", talk: "C30" },
         { type: "event", start: "5:00", end: "5:30", label: "Closing", room: "EB.G.18" }
@@ -690,7 +690,7 @@ In this talk we show how to translate relevant logic to lineage provenance, and 
   return {
     venue: "Western Sydney University, Parramatta South Campus",
     pdf: "assets/ADU_book_of_abstracts.pdf",
-    pdfPageOffset: 6,
+    pdfPageOffset: 6, // printed page 1 is page 7 of the PDF file
     rooms: rooms,
     talks: talks,
     days: days
